@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SwimmingController : MonoBehaviour
 {
-    [SerializeField] private float swimmingForce;
+    [SerializeField] private float swimmingForce; 
     [SerializeField] private float resistanceForce;
     [SerializeField] private float deadZone;
     [SerializeField] private Transform trackingSpace;
@@ -27,6 +26,8 @@ public class SwimmingController : MonoBehaviour
         {
             Vector3 leftHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
             Vector3 rightHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+
+
             Vector3 localVelocity = leftHandDirection + rightHandDirection;
             localVelocity *= -1f;
             if (localVelocity.sqrMagnitude > deadZone * deadZone)
@@ -34,6 +35,9 @@ public class SwimmingController : MonoBehaviour
                 AddSwimmingForce(localVelocity);
             }
         }
+
+        
+       
         ApplyReststanceForce();
     }
 
