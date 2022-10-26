@@ -1,12 +1,14 @@
 ﻿using System;
+using Oculus.Interaction.Input;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SwimmingController : MonoBehaviour
 {
     [SerializeField] private float swimmingForce; 
     [SerializeField] private float resistanceForce;
-    [SerializeField] private float deadZone;
+    [FormerlySerializedAs("minStroke")] [SerializeField] private float minStrokeLength;
     [SerializeField] private Transform trackingSpace;
 
     private new Rigidbody rigidbody;
@@ -19,18 +21,18 @@ public class SwimmingController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
-        bool leftButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
+        var rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch); //primary -> secondary 안됨
+        var leftButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
 
         if (rightButtonPressed && leftButtonPressed)
         {
-            Vector3 leftHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
-            Vector3 rightHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+            var leftHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+            var rightHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+            
 
-
-            Vector3 localVelocity = leftHandDirection + rightHandDirection;
+            var localVelocity = leftHandDirection + rightHandDirection;
             localVelocity *= -1f;
-            if (localVelocity.sqrMagnitude > deadZone * deadZone)
+            if (localVelocity.sqrMagnitude > minStrokeLength * minStrokeLength)
             {
                 AddSwimmingForce(localVelocity);
             }
@@ -55,7 +57,7 @@ public class SwimmingController : MonoBehaviour
 
     private void AddSwimmingForce(Vector3 localVelocity)
     {
-        Vector3 worldSpaceVelocity = trackingSpace.TransformDirection(localVelocity);
+        var worldSpaceVelocity = trackingSpace.TransformDirection(localVelocity);
         rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Acceleration);
         currentDirection = worldSpaceVelocity.normalized;
     }

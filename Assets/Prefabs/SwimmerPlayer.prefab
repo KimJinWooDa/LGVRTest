@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &33220371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33220372}
+  m_Layer: 0
+  m_Name: DirectionPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33220372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33220371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3540482780110253242}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &315989515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315989516}
+  m_Layer: 0
+  m_Name: DirectionPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315989516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315989515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3540482781175344833}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73325173578322091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4249,7 @@ MonoBehaviour:
   _interactors:
   - {fileID: 3675890934669457324}
   _interactorComparer: {fileID: 0}
-  _data: {fileID: 0}
+  _data: {fileID: 7828452543193040497}
   MaxIterationsPerFrame: 3
 --- !u!1 &1125555508669366385
 GameObject:
@@ -5860,7 +5922,7 @@ MonoBehaviour:
   - {fileID: 3925316929846202136}
   - {fileID: 425309294644737919}
   _interactorComparer: {fileID: 0}
-  _data: {fileID: 3970089654011459672}
+  _data: {fileID: 1800387722521951815}
   MaxIterationsPerFrame: 3
 --- !u!1 &1825591745009382378
 GameObject:
@@ -6366,7 +6428,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2234295956738272175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11682,6 +11744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3545187445368796698}
+  - {fileID: 33220372}
   m_Father: {fileID: 7145501656783912794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -12831,6 +12894,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3543715896162030519}
+  - {fileID: 315989516}
   m_Father: {fileID: 7148994633789102306}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -15905,10 +15969,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactors:
   - {fileID: 3968058873245177334}
-  - {fileID: 5070894826868637647}
-  - {fileID: 6910896744043806298}
+  - {fileID: 4688168356144692129}
+  - {fileID: 4710428531261485430}
   _interactorComparer: {fileID: 0}
-  _data: {fileID: 5181243023106339721}
+  _data: {fileID: 4279279519247680902}
   MaxIterationsPerFrame: 3
 --- !u!1 &4292615242891206630
 GameObject:
@@ -17239,6 +17303,8 @@ GameObject:
   - component: {fileID: 3540482780827534319}
   - component: {fileID: 3540482780827534313}
   - component: {fileID: 3540482780827534314}
+  - component: {fileID: 8997629362286785793}
+  - component: {fileID: 4484850113640892114}
   m_Layer: 0
   m_Name: SwimmerPlayer
   m_TagString: Untagged
@@ -17320,7 +17386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swimmingForce: 2.3
   resistanceForce: 0.95
-  deadZone: 1.5
+  minStrokeLength: 0.1
   trackingSpace: {fileID: 7144403715905677020}
 --- !u!114 &3540482780827534313
 MonoBehaviour:
@@ -17336,7 +17402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdRightGrabTransform: {fileID: 3540482780110253242}
   holdLeftGrabTransform: {fileID: 3540482781175344833}
-  rayRange: 0.3
+  rayRange: 0.007
   speed: 2
   amplitude: 0.03
   frequency: 0.01
@@ -17359,6 +17425,43 @@ MonoBehaviour:
   RotationAngle: 45
   Speed: 1
   CameraRig: {fileID: 7144403715898938960}
+--- !u!114 &8997629362286785793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619457071775612817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7982222cfe0a7642b416bd1c7037ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushOutPower: 0.1
+  minPushLength: 0.05
+  rayRange: 0.05
+  waterFriction: 0.1
+  canPushWall: 0
+  frequency: 0.01
+  amplitude: 0.1
+  holdRightGrabTransform: {fileID: 3540482780110253242}
+  holdLeftGrabTransform: {fileID: 3540482781175344833}
+--- !u!114 &4484850113640892114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619457071775612817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a081dd0001293f459cab0b536aebb2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightDirectionPos: {fileID: 33220372}
+  leftDirectionPos: {fileID: 315989516}
+  trackingSpace: {fileID: 5619457071775612816}
+  jetPackPower: 10000
 --- !u!1 &5796756637725589220
 GameObject:
   m_ObjectHideFlags: 0
@@ -20348,7 +20451,7 @@ MonoBehaviour:
   _interactors:
   - {fileID: 5118073269396085322}
   _interactorComparer: {fileID: 0}
-  _data: {fileID: 0}
+  _data: {fileID: 4292615242891206630}
   MaxIterationsPerFrame: 3
 --- !u!1 &7828452543193040497
 GameObject:
@@ -21340,7 +21443,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8772512693720024392}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

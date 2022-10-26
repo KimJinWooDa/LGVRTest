@@ -38,8 +38,12 @@ public class PullRope : MonoBehaviour
     private void Update()
     {
         //Debug.DrawRay(holdRightGrabTransform.position + Vector3.up*.5f, Vector3.down, Color.red);
-        canRightHoldRope = Physics.Raycast(holdRightGrabTransform.position + Vector3.up*.5f, Vector3.down, out hit, rayRange, 1 << ropeLayer);
-        canLeftHoldRope = Physics.Raycast(holdLeftGrabTransform.position + Vector3.up*.5f, Vector3.down, out hit, rayRange, 1 << ropeLayer);
+        //canRightHoldRope = Physics.Raycast(holdRightGrabTransform.position + Vector3.up*.5f, Vector3.down, out hit, rayRange, 1 << ropeLayer);
+        Collider[] rightColliders = Physics.OverlapSphere(holdRightGrabTransform.position, rayRange, 1 << ropeLayer);
+        Collider[] leftColliders = Physics.OverlapSphere(holdLeftGrabTransform.position, rayRange, 1 << ropeLayer);
+        canRightHoldRope = rightColliders.Length > 0;
+        canLeftHoldRope = leftColliders.Length > 0;
+        //canLeftHoldRope = Physics.Raycast(holdLeftGrabTransform.position + Vector3.up*.5f, Vector3.down, out hit, rayRange, 1 << ropeLayer);
 
         if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) && canRightHoldRope)
         {
