@@ -17344,7 +17344,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &3540482780827534315
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17402,7 +17402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdRightGrabTransform: {fileID: 3540482780110253242}
   holdLeftGrabTransform: {fileID: 3540482781175344833}
-  rayRange: 0.007
+  rayRange: 0.023
   speed: 2
   amplitude: 0.03
   frequency: 0.01
@@ -17437,9 +17437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7982222cfe0a7642b416bd1c7037ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushOutPower: 0.1
+  pushOutPower: 2
   minPushLength: 0.05
-  rayRange: 0.05
+  rayRange: 0.1
   waterFriction: 0.1
   canPushWall: 0
   frequency: 0.01
@@ -17458,10 +17458,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a081dd0001293f459cab0b536aebb2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightDirectionPos: {fileID: 33220372}
-  leftDirectionPos: {fileID: 315989516}
-  trackingSpace: {fileID: 5619457071775612816}
-  jetPackPower: 10000
+  rightHand: {fileID: 3540482780110253242}
+  leftHand: {fileID: 3540482781175344833}
+  rightHandDirectionPos: {fileID: 33220372}
+  leftHandDirectionPos: {fileID: 315989516}
+  jetPackPower: 1
 --- !u!1 &5796756637725589220
 GameObject:
   m_ObjectHideFlags: 0

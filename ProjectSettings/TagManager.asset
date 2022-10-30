@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - KEY
   layers:
   - Default
   - TransparentFX
@@ -13,14 +14,14 @@ TagManager:
   - UI
   - Rope
   - SeaRidge
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Marker
+  - Stencil1
+  - Stencil2
+  - Stencil3
+  - Stencil4
+  - Stencil5
+  - DistanceGrabbable
+  - VRHand
   - 
   - 
   - 

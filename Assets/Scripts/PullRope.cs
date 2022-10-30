@@ -31,7 +31,7 @@ public class PullRope : MonoBehaviour
     private Rigidbody rb;
     private void Start()
     {
-        //rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         ropeLayer = LayerMask.NameToLayer("Rope");
     }
 
@@ -83,7 +83,8 @@ public class PullRope : MonoBehaviour
             var distance = Vector3.Distance(firstRightHoldTransform , holdingRightTransform.position);
 
             //거리만큼만 댕기면 dir 방향으로 나아가기
-            transform.position += dir * (distance * speed);
+            rb.MovePosition(transform.position + dir * (distance * speed));
+            //transform.position += dir * (distance * speed);
             //rb.AddForce(dir * (speed * distance), ForceMode.Acceleration);
         }
         else if (isLeftHoldedState)
@@ -94,7 +95,8 @@ public class PullRope : MonoBehaviour
             //dir.x = 0; dir.y = 0;
             var distance = Vector3.Distance(firstLeftHoldTransform , holdingLeftTransform.position);
 
-            transform.position += dir * (distance * speed);
+            rb.MovePosition(transform.position + dir * (distance * speed));
+            //transform.position += dir * (distance * speed);
             //rb.AddForce(dir * (speed * distance), ForceMode.Acceleration);
         }
     }

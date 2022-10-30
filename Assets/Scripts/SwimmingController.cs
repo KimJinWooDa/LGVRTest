@@ -21,9 +21,9 @@ public class SwimmingController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch); //primary -> secondary 안됨
+        var rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
         var leftButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
-
+        
         if (rightButtonPressed && leftButtonPressed)
         {
             var leftHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
