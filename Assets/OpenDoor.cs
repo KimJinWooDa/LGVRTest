@@ -27,6 +27,10 @@ public class OpenDoor : MonoBehaviour
         if (other.CompareTag("KEY"))
         {
             Destroy(other.gameObject);
+            for (int i = 0; i < keyPoints.Length; i++)
+            {
+                Destroy(keyPoints[i]);
+            }
             StartCoroutine(Open());
         }
     }

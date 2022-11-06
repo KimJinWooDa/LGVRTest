@@ -20,28 +20,24 @@ public class JetPack : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private Vector3 rightDirection;
+    private Vector3 leftDirection;
     private void FixedUpdate()
     {
-        if (OVRInput.Get(OVRInput.Button.One))
-        {
-            //방향을 고려해야하는데
-            //var localRightHandPosition = OVRInput.GetLocalControllerAcceleration(OVRInput.Controller.RHand);
-            //var worldRightHandPosition = 
-            var direction = rightHandDirectionPos.position - rightHand.position;
-            direction *= -1f;
-            rb.AddForce(direction * (jetPackPower * Time.fixedTime), ForceMode.Acceleration);
-            
-        }
+        
         if (OVRInput.Get(OVRInput.Button.Three))
         {
-            // var leftHandPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LHand);
-            // var worldLeftHandPos = leftHand.TransformDirection(leftHandPosition);
-            // var worldDirection  = (leftHandDirectionPos.position - worldLeftHandPos);
-            //
-            // rb.AddForce(worldDirection * jetPackPower, ForceMode.Acceleration);
-            var direction = leftHand.position - leftHandDirectionPos.position;
-            direction *= -1f;
-            rb.AddForce(direction * (jetPackPower * Time.fixedTime), ForceMode.Acceleration);
+            rightDirection = rightHandDirectionPos.position - rightHand.position;
+            rightDirection *= -1f;
+
+            rb.AddForce(rightDirection * (jetPackPower * Time.fixedTime), ForceMode.Acceleration);
+        }
+
+        if (OVRInput.Get(OVRInput.Button.One))
+        {
+            leftDirection = leftHand.position - leftHandDirectionPos.position;
+            leftDirection *= -1f;
+            rb.AddForce(leftDirection * (jetPackPower * Time.fixedTime), ForceMode.Acceleration);
         }
     }
 }

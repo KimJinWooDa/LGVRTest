@@ -14,6 +14,8 @@ public class SwimmingController : MonoBehaviour
     private new Rigidbody rigidbody;
     private Vector3 currentDirection;
 
+    public float f = 1f;
+    public bool canSwmming;
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -24,7 +26,7 @@ public class SwimmingController : MonoBehaviour
         var rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
         var leftButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
         
-        if (rightButtonPressed && leftButtonPressed)
+        if (rightButtonPressed && leftButtonPressed && canSwmming)
         {
             var leftHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
             var rightHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
@@ -36,6 +38,20 @@ public class SwimmingController : MonoBehaviour
             {
                 AddSwimmingForce(localVelocity);
             }
+        }
+        else if (leftButtonPressed)
+        {
+            var leftHandRotation = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+            float rotationForce = Vector3.Magnitude(leftHandRotation);
+            var transformEulerAngles = transform.eulerAngles;
+            transformEulerAngles.y += rotationForce * f;
+        }
+        else if (rightButtonPressed)
+        {
+            var rightHandRotation = OVRInput.GetLocalControllerAcceleration(OVRInput.Controller.LTouch);
+            float rotationForce = Vector3.Magnitude(rightHandRotation);
+            var transformEulerAngles = transform.eulerAngles;
+            transformEulerAngles.y += rotationForce * f;
         }
 
         
