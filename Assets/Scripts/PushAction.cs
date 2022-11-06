@@ -10,10 +10,10 @@ public class PushAction : MonoBehaviour
     [SerializeField] private float rayRange = 0.7f;
     [SerializeField] private float waterFriction = 0.07f;
     
-    [SerializeField] private bool canPushWall;
-
+    [SerializeField] private bool canRightPushWall;
+    [SerializeField] private bool canLeftPushWall;
     private Rigidbody rb;
-    private int seaRidgeLayer;
+
     private int pushWallLayer;
     [SerializeField] private float frequency = 0.01f;
     [SerializeField] private float amplitude = 0.1f;
@@ -22,7 +22,6 @@ public class PushAction : MonoBehaviour
 
     private void Awake()
     {
-        seaRidgeLayer = LayerMask.NameToLayer("SeaRidge");
         rb = GetComponent<Rigidbody>();
         pushWallLayer = LayerMask.NameToLayer("SeaRidge");
     }
@@ -37,35 +36,37 @@ public class PushAction : MonoBehaviour
         Collider[] leftColliders =
             Physics.OverlapSphere(holdLeftGrabTransform.position, rayRange,
                 1 << pushWallLayer);
-        canPushWall = rightColliders.Length > 0 && leftColliders.Length > 0;
+        canRightPushWall = rightColliders.Length > 0;
+        canLeftPushWall =  leftColliders.Length > 0;
         var rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
         var leftButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
 
-        if (canPushWall && rightButtonPressed && leftButtonPressed)
+        if (canRightPushWall && rightButtonPressed)
         {
             var rightPushDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
-            var leftPushDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
-
-            var localVelocityDirection = rightPushDirection + leftPushDirection;
+           
+            var localVelocityDirection = rightPushDirection;
             localVelocityDirection *= -1f;
             
             if (localVelocityDirection.sqrMagnitude > minPushLength * minPushLength)
             {
                 OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.RTouch);
-                OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.LTouch);
+
                 rb.AddForce(localVelocityDirection * pushOutPower, ForceMode.Impulse);
-                print(localVelocityDirection * pushOutPower);
+                
             }
         }
-        //ApplyReststanceForce(); //already exist resistanceForce in swimmingController.cs
+        else if (canLeftPushWall && leftButtonPressed)
+        {
+            var leftPushDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+            var localVelocityDirection = leftPushDirection;
+            localVelocityDirection *= -1f;
+            if (localVelocityDirection.sqrMagnitude > minPushLength * minPushLength)
+            {
+                OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.LTouch);
+                rb.AddForce(localVelocityDirection * pushOutPower, ForceMode.Impulse);
+            }
+        }
     }
 
-    void ApplyReststanceForce()
-    {
-        if (rb.velocity.sqrMagnitude > 0.01f)
-        {
-            rb.AddForce(-rb.velocity * waterFriction, ForceMode.Acceleration);
-        }
-        
-    }
 }
