@@ -1,64 +1,9 @@
 fileFormatVersion: 2
-guid: 6db6a7b58314a1b4c85877db02948fe8
+guid: bfd07c797a9bdf34c94e6e6eb4e77e86
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: black
-    second: {fileID: 2100000, guid: ac34767745e7e864a80051d1b5cf88f3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: black rubber
-    second: {fileID: 2100000, guid: 20c5e315090a56b44a9a1d704dd62aeb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: button
-    second: {fileID: 2100000, guid: c51ef8365877b2443b8bd005f618d970, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: class wall
-    second: {fileID: 2100000, guid: 45e5f1593e7e59b43bcfc29965814fb2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: class wall2
-    second: {fileID: 2100000, guid: 63ae139e229064349a40cac428a7ef01, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: flag
-    second: {fileID: 2100000, guid: 541234a3e844102429c38b9c1e9d2586, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: green board
-    second: {fileID: 2100000, guid: 6ad040f1e89a55e4f8b5faee78883161, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: green plastic
-    second: {fileID: 2100000, guid: 6afc5d3f9daf50249ad4a44d3d2ee1a9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: metal
-    second: {fileID: 2100000, guid: ca2dff57aada9814dbf6517d065a540e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: texture
-    second: {fileID: 2100000, guid: 05c52dc7d649e3044b8c923e92f3a82a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wood darker
-    second: {fileID: 2100000, guid: b9d71c75220834645892e02f26ddea7a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -91,7 +36,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 0.3
-    meshCompression: 2
+    meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
@@ -124,7 +69,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -143,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.3
+    globalScale: 0.003
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
