@@ -47,6 +47,7 @@ namespace Oculus.Interaction
             }
         }
 
+        public bool isGrabbed;
         public Transform Transform => transform;
         public List<Pose> GrabPoints => _selectingPoints;
 
@@ -154,6 +155,7 @@ namespace Oculus.Interaction
             }
 
             _activeTransformer.BeginTransform();
+            isGrabbed = true;
         }
 
         private void UpdateTransform()
@@ -174,6 +176,7 @@ namespace Oculus.Interaction
             }
             _activeTransformer.EndTransform();
             _activeTransformer = null;
+            isGrabbed = false;
         }
 
         protected override void OnDisable()
