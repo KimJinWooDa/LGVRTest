@@ -27,11 +27,20 @@ public class TextManager : Singleton<TextManager>
     }
     public void GetMessage(string message)
     {
+        if (message == "CLOSE")
+        {
+            UIManager.Instance.SetKeyBoard();
+            return;
+        }
         if (message != "ENTER" && textCanvas != null)
         {
             if (message == "ESC")
             {
                 texts = texts.Substring(0, texts.Length - 1);
+            }
+            else if (message == "SPACEBAR")
+            {
+                texts += " ";
             }
             else
             {
@@ -54,7 +63,7 @@ public class TextManager : Singleton<TextManager>
        
         GameObject airPlane = Instantiate(paperAirPlane);
         airPlane.transform.position = player.position;
-        airPlane.GetComponent<PaperAirPlane>().transferText = texts;
+        airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
  
         texts = null;
     }

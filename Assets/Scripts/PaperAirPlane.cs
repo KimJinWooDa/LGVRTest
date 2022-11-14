@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Oculus.Interaction.Throw;
 using UnityEngine;
 
@@ -7,14 +8,16 @@ public class PaperAirPlane : MonoBehaviour
     public string transferText;
     private Material[] mat;
     private Renderer _renderer;
-    private ParticleSystem ps;
+    private ParticleSystem[] ps;
     private TrailRenderer trailRenderer;
-    private void Awake()
+
+    private void Start()
     {
         trailRenderer = GetComponentInChildren<TrailRenderer>();
         trailRenderer.enabled = false;
-        ps = GetComponentInChildren<ParticleSystem>();
-        ps.Play();
+        ps = GetComponentsInChildren<ParticleSystem>();
+        ps[0].Play();
+        ps[1].Stop();
         _renderer = GetComponent<Renderer>();
         mat = _renderer.materials;
     }
@@ -22,6 +25,7 @@ public class PaperAirPlane : MonoBehaviour
     public void SetOnLine()
     {
         trailRenderer.enabled = true;
+        ps[1].Play();
     }
     public void SetOnMaterial()
     {
@@ -43,5 +47,18 @@ public class PaperAirPlane : MonoBehaviour
 
             Destroy(this.gameObject);
         }
+
+        if (collision.collider.CompareTag("GROUND"))
+        {
+            trailRenderer.enabled = false;
+            ps[1].Stop();
+            //StartCoroutine(WaitDestroy());
+        }
+    }
+
+    IEnumerator WaitDestroy()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(this.gameObject);
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - WEAPON
   - YOUTUBER
   - AIRPLANE
+  - GROUND
   layers:
   - Default
   - TransparentFX

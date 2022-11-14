@@ -6,11 +6,12 @@ using DG.Tweening;
 using UnityEngine.Serialization;
 
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
     [Header("키 안맞으면 offset 수치를 조정해주세요")]
     float height = 1f;
     public float offset = 1f;
+    public Vector3 chatBoxOffset;
     
     [Space(10)]
     [Header("애니메이션시간")]
@@ -57,14 +58,14 @@ public class UIManager : MonoBehaviour
         
 
         key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, height + offset, key1.transform.position.z), InTime).SetEase(inAniType);
-        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x, height + offset + .4f, key2.transform.position.z), InTime).SetEase(inAniType);
+        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x+chatBoxOffset.x, height + offset + .25f + chatBoxOffset.y, key2.transform.position.z+chatBoxOffset.z), InTime).SetEase(inAniType);
     }
 
     void SetOffKeyBoard()
     {
         isOn = false;
         key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, -2f, key1.transform.position.z), OutTime).SetEase(outAniType);
-        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x, -2f+ .4f, key2.transform.position.z), OutTime).SetEase(outAniType);
+        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x, -2f+ .25f, key2.transform.position.z), OutTime).SetEase(outAniType);
         StartCoroutine(WaitSetOff());
     }
 

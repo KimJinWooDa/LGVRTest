@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 132450783603770614}
   - component: {fileID: 132450783603770615}
   - component: {fileID: 5853938844395770468}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ThrowUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 132450784228794120}
   - component: {fileID: 132450784228794118}
   - component: {fileID: 132450784228794119}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 132450784443711095}
   - component: {fileID: 3154468267181295049}
   - component: {fileID: 938168324852575093}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ RectTransform:
   m_GameObject: {fileID: 132450784443711097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.45, y: 1.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 132450784228794120}
@@ -289,7 +289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.049278}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &132450784443711094
