@@ -177,7 +177,7 @@ namespace Oculus.Interaction.HandGrab
                 }
                 InjectOptionalMovementProvider(movementProvider);
             }
-
+  
             _grabPoseFinder = new GrabPoseFinder(_handGrabPoses, RelativeTo, this.transform);
             this.EndStart(ref _started);
         }
