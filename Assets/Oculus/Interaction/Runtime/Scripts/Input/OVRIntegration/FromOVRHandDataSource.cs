@@ -62,7 +62,7 @@ namespace Oculus.Interaction.Input
         }
 
         private readonly HandDataAsset _handDataAsset = new HandDataAsset();
-        private OVRHand _ovrHand;
+        [SerializeField] private OVRHand _ovrHand;
         private OVRInput.Controller _ovrController;
         private float _lastHandScale;
         private HandDataSourceConfig _config;

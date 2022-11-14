@@ -39,20 +39,20 @@ public class SwimmingController : MonoBehaviour
                 AddSwimmingForce(localVelocity);
             }
         }
-        else if (leftButtonPressed)
-        {
-            var leftHandRotation = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
-            float rotationForce = Vector3.Magnitude(leftHandRotation);
-            var transformEulerAngles = transform.eulerAngles;
-            transformEulerAngles.y += rotationForce * f;
-        }
-        else if (rightButtonPressed)
-        {
-            var rightHandRotation = OVRInput.GetLocalControllerAcceleration(OVRInput.Controller.LTouch);
-            float rotationForce = Vector3.Magnitude(rightHandRotation);
-            var transformEulerAngles = transform.eulerAngles;
-            transformEulerAngles.y += rotationForce * f;
-        }
+        // else if (leftButtonPressed) //한쪽 손으로 회전하는 방법
+        // {
+        //     var leftHandRotation = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+        //     float rotationForce = Vector3.Magnitude(leftHandRotation);
+        //     var transformEulerAngles = transform.eulerAngles;
+        //     transformEulerAngles.y += rotationForce * f;
+        // }
+        // else if (rightButtonPressed)
+        // {
+        //     var rightHandRotation = OVRInput.GetLocalControllerAcceleration(OVRInput.Controller.LTouch);
+        //     float rotationForce = Vector3.Magnitude(rightHandRotation);
+        //     var transformEulerAngles = transform.eulerAngles;
+        //     transformEulerAngles.y += rotationForce * f;
+        // }
 
         
        

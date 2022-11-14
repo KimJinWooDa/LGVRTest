@@ -125,10 +125,11 @@ namespace Oculus.Interaction
             _rigidbody.isKinematic = _savedIsKinematicState;
         }
 
+        public float addForce = 10f;
         public void ApplyVelocities(Vector3 linearVelocity, Vector3 angularVelocity)
         {
             _hasPendingForce = true;
-            _linearVelocity = linearVelocity;
+            _linearVelocity = linearVelocity * addForce;
             _angularVelocity = angularVelocity;
         }
 

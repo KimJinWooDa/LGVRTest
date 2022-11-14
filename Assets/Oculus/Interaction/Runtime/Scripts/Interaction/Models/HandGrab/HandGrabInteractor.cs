@@ -274,7 +274,22 @@ namespace Oculus.Interaction.HandGrab
                 base.InteractableSelected(interactable);
                 return;
             }
-
+            
+            
+            // 왜안되냐 짜증나네 ㅠ
+            // if (interactable.transform.CompareTag("AIRPLANE"))
+            // {
+            //     Debug.Log("1");
+            //     interactable.SendMessage("SetOnMaterial");
+            //     interactable.SendMessage("SetOnLine");
+            // }
+            //
+            // if (interactable.gameObject.CompareTag("AIRPLANE"))
+            // {
+            //     Debug.Log("2");
+            //     interactable.SendMessage("SetOnMaterial");
+            //     interactable.SendMessage("SetOnLine");
+            // }
             _wristToGrabAnchorOffset = GetGrabAnchorOffset(_currentTarget.Anchor, _wristPose);
             Pose grabPose = PoseUtils.Multiply(_wristPose, _wristToGrabAnchorOffset);
             Pose interactableGrabStartPose = _currentTarget.WorldGrabPose;
@@ -289,9 +304,14 @@ namespace Oculus.Interaction.HandGrab
         /// <param name="interactable">The released interactable</param>
         protected override void InteractableUnselected(HandGrabInteractable interactable)
         {
+            
             base.InteractableUnselected(interactable);
             _movement = null;
-
+            if (interactable.CompareTag("AIRPLANE"))
+            {
+                interactable.SendMessage("SetOffMaterial");
+               
+            }
             ReleaseVelocityInformation throwVelocity = VelocityCalculator != null ?
                 VelocityCalculator.CalculateThrowVelocity(interactable.transform) :
                 new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);

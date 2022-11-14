@@ -11,18 +11,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac666f23650b94b4ea891467ab3677e5, type: 3}
   m_Name: DefaultTransformFeatureStateThresholds
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   _featureThresholds:
   - _feature: 0
     _thresholds:
-    - _thresholdMidpoint: 40
+    - _thresholdMidpoint: 60
       _thresholdWidth: 20
       _firstState: 0
       _secondState: 2
     _minTimeInState: 0
   - _feature: 1
     _thresholds:
-    - _thresholdMidpoint: 60
+    - _thresholdMidpoint: 40
       _thresholdWidth: 20
       _firstState: 3
       _secondState: 5
