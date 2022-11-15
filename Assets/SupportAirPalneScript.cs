@@ -6,7 +6,7 @@ using UnityEngine.Animations.Rigging;
 public class SupportAirPalneScript : MonoBehaviour
 {
     public PaperAirPlane pap;
-    
+    public bool isGravity;
     public void SetOnMat()
     {
         pap.SetOnMaterial();
@@ -14,7 +14,7 @@ public class SupportAirPalneScript : MonoBehaviour
 
     public void SetLine()
     {
-        pap.GetComponent<Rigidbody>().useGravity = true;
+        if(isGravity) pap.GetComponent<Rigidbody>().useGravity = true;
         pap.SetOnLine();
     }
 

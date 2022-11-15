@@ -42,6 +42,10 @@ public class TextManager : Singleton<TextManager>
             {
                 texts += " ";
             }
+            else if (message == "CLEAR")
+            {
+                texts = null; //초기화
+            }
             else
             {
                 texts += message;

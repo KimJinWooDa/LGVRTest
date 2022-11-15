@@ -9,9 +9,11 @@ using UnityEngine.Serialization;
 public class UIManager : Singleton<UIManager>
 {
     [Header("키 안맞으면 offset 수치를 조정해주세요")]
-    float height = 1f;
     public float offset = 1f;
+    
+    [Header("KeyBoard위에 있는 텍스쳐 상자의 위치를 변경하고 싶으면 수치 건드세요")]
     public Vector3 chatBoxOffset;
+    float height = 1f;
     
     [Space(10)]
     [Header("애니메이션시간")]
@@ -22,23 +24,39 @@ public class UIManager : Singleton<UIManager>
     [Header("애니메이션효과")]
     public Ease inAniType;
     [FormerlySerializedAs("type")] public Ease outAniType;
+
+    [Header("UI나올 때/ 들어갈 때 Bgm")] 
+    public AudioClip[] ac;
+    private AudioSource _audioSource;
     
-    [Header("건들No")]
+    [Space(10)]
+    [Header("!!!!!아래 부터 건들No!!!!!!!!!")]
     public GameObject[] keyboard;
     [FormerlySerializedAs("player")] public Transform trace;
     public Transform rot;
+
     private bool isOn;
     private GameObject key1;
     private GameObject key2;
-   
+    
+    
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     public void SetKeyBoard()
     {
         if (!isOn)
         {
             SetOnKeyBoard();
+            _audioSource.clip = ac[0];
+            _audioSource.Play();
         }
         else
         {
+            _audioSource.clip = ac[1];
+            _audioSource.Play();
             SetOffKeyBoard();
         }
     }

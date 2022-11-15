@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutLineMaterial
+  m_Name: OriginOutLine
   m_Shader: {fileID: -6465566751694194690, guid: 4770645f4e8b0de4492d84458a7763fc,
     type: 3}
   m_ValidKeywords: []
@@ -51,7 +51,7 @@ Material:
     - _AlphaClip: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Thickness: 1.02
+    - _Thickness: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.5026177, b: 15.999998, a: 1}
+    - _Color: {r: 0, g: 0.062827215, b: 1.9999998, a: 1}
   m_BuildTextureStacks: []

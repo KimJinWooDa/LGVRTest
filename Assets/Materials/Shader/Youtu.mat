@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9078716357724036052
+--- !u!114 &-7329330587646406335
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,11 +20,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutLineMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 4770645f4e8b0de4492d84458a7763fc,
+  m_Name: Youtu
+  m_Shader: {fileID: -6465566751694194690, guid: 9975b8cc1441a7248987ffe2a37ee198,
     type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -48,10 +49,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0.5
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _CastShadows: 1
+    - _Cull: 0
+    - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Thickness: 1.02
+    - _ReceiveShadows: 1
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 0, g: 0.5026177, b: 15.999998, a: 1}
+    - _Color: {r: 0.18431373, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
