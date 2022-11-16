@@ -54,6 +54,10 @@ public class TextManager : Singleton<TextManager>
         }
         else
         {
+            if (UIManager.Instance.tutorialHand != null)
+            {
+                UIManager.Instance.tutorialHand.SetActive(false);
+            }
             SpawnPaperAirplane();
         }
     }

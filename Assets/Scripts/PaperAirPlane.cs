@@ -49,25 +49,27 @@ public class PaperAirPlane : MonoBehaviour
     }
     public void SetOnMaterial()
     {
+        distance = Vector3.Distance(transform.position, hit.point);
+        time = distance / speed;
         targetingPoint = Instantiate(targetPosition);
         mat[1].SetFloat("_Thickness", 1.01f);
     }
     public void SetOffMaterial()
     {
-        distance = Vector3.Distance(transform.position, hit.point);
-        time = distance / speed;
-        targetingPoint = null;
+        Destroy(targetingPoint);
         ps[1].Stop();
         trailRenderer.enabled = false;
         mat[1].SetFloat("_Thickness", 1f);
     }
+
+    private int count = 0;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("YOUTUBER"))
         {
             Transform tr = collision.transform;
             PopUpText textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
-            
+            textOb.GetComponent<Canvas>().sortingOrder = count++;
             tr.GetComponent<YouTuberZoneBgm>().StartBGM();
             textOb.transform.position = this.transform.position;
             textOb.message = transferText;
@@ -97,10 +99,11 @@ public class PaperAirPlane : MonoBehaviour
     {
         if (isGrabbed)
         {
-            if (Physics.Raycast(rayPosition.position, Vector3.forward, out hit, 100f))
+            if (Physics.Raycast(this.transform.position, Vector3.forward, out hit, 1000f))
             {
-                targetingPoint.transform.position = hit.point;
                 //표적? UI나오기
+                targetingPoint.transform.position = hit.point;
+                
             }
             else
             {
@@ -113,7 +116,7 @@ public class PaperAirPlane : MonoBehaviour
             if (Vector3.Distance(this.transform.position, hit.transform.position) > 0.1f)
             {
                 transform.DOMove(hit.point, time);
-
+        
             }
             else
             {

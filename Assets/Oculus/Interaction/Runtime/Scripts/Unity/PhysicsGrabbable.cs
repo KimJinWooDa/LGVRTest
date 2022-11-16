@@ -130,7 +130,7 @@ namespace Oculus.Interaction
         {
             _hasPendingForce = true;
             _linearVelocity = linearVelocity * addForce;
-            //_angularVelocity = angularVelocity * 0.05f;
+            _angularVelocity = angularVelocity;
         }
 
         private void FixedUpdate()
@@ -139,7 +139,7 @@ namespace Oculus.Interaction
             {
                 _hasPendingForce = false;
                 _rigidbody.AddForce(_linearVelocity, ForceMode.VelocityChange);
-                //_rigidbody.AddTorque(_angularVelocity, ForceMode.VelocityChange);
+                _rigidbody.AddTorque(_angularVelocity, ForceMode.VelocityChange);
                 WhenVelocitiesApplied(_linearVelocity, _angularVelocity);
             }
         }
