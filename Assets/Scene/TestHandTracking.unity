@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1027,9 +1027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 927a9b161d19a194ea3df1807565d346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0.35
+  offset: 0.2
   chatBoxOffset: {x: 0, y: -0.01, z: 0.05}
-  InTime: 1.5
+  InTime: 1
   OutTime: 1
   inAniType: 30
   outAniType: 26
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Clench your Fist to Make the KeyBoard Appear
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
   m_sharedMaterial: {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3,
@@ -1367,8 +1367,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205399665}
   m_LocalRotation: {x: 0.063304186, y: 0.59481317, z: 0.8003824, w: -0.039724298}
-  m_LocalPosition: {x: 0, y: 0, z: 0.11000012}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0.195}
+  m_LocalScale: {x: 0.00053154, y: 0.00053154, z: 0.00053154}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1217962246}
@@ -1377,8 +1377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -106.827, y: -169.233, z: -2.3200073}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0070000105, y: 0.020999946}
-  m_SizeDelta: {x: 668, y: 828}
+  m_AnchoredPosition: {x: 0.066, y: 0.015}
+  m_SizeDelta: {x: 528, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1205399667
 MonoBehaviour:
@@ -1576,8 +1576,8 @@ RectTransform:
   m_GameObject: {fileID: 1217962245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1779, y: 1.0442, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.70919436, z: 0.67917484}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1129727784}
   m_Father: {fileID: 1205399666}
@@ -1585,8 +1585,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.1, y: 46}
-  m_SizeDelta: {x: 318.6, y: 191.2}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -0.0000038146973}
+  m_SizeDelta: {x: 528, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217962247
 MonoBehaviour:
@@ -1608,8 +1608,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fd7cf88ee9b05f94f84bd7686a9669a6, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 96cf46cdd9204d44ebd24ef62f72fcf8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
