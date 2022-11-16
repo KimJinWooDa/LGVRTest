@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 using UnityEngine.Serialization;
 
 
@@ -34,7 +35,7 @@ public class UIManager : Singleton<UIManager>
     public GameObject[] keyboard;
     [FormerlySerializedAs("player")] public Transform trace;
     public Transform rot;
-
+    public GameObject tutorialHand;
     private bool isOn;
     private GameObject key1;
     private GameObject key2;
@@ -63,6 +64,11 @@ public class UIManager : Singleton<UIManager>
 
     void SetOnKeyBoard()
     {
+        if (tutorialHand != null)
+        {
+            tutorialHand.GetComponentInChildren<TextMeshProUGUI>().text =
+                "Clench your Fist to Make the KeyBoard Disappear";
+        }
         isOn = true;
 
         key1 = Instantiate(keyboard[0], trace.position - new Vector3(0, height + offset, 0), Quaternion.identity * Quaternion.AngleAxis(rot.eulerAngles.y, Vector3.up));
@@ -81,6 +87,10 @@ public class UIManager : Singleton<UIManager>
 
     void SetOffKeyBoard()
     {
+        if (tutorialHand != null)
+        {
+            tutorialHand.SetActive(false);
+        }
         isOn = false;
         key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, -2f, key1.transform.position.z), OutTime).SetEase(outAniType);
         key2.transform.DOLocalMove(new Vector3(key2.transform.position.x, -2f+ .25f, key2.transform.position.z), OutTime).SetEase(outAniType);

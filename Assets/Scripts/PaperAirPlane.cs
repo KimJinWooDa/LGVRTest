@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Oculus.Interaction.Throw;
 using UnityEngine;
+using DG.Tweening;
 
 public class PaperAirPlane : MonoBehaviour
 {
@@ -14,8 +15,21 @@ public class PaperAirPlane : MonoBehaviour
     public AudioClip[] ac;
     public GameObject particle;
     private GameObject spawnPs;
+    public bool isGrabbed;
+    public bool isThrow;
+    public Transform rayPosition;
+    private RaycastHit hit;
+    public GameObject targetPosition;
+    private GameObject targetingPoint;
+    private Rigidbody rb;
+    
+    
+    private float distance;
+    [SerializeField] private float time;
+    [SerializeField] private float speed;
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
         trailRenderer = GetComponentInChildren<TrailRenderer>();
         trailRenderer.enabled = false;
@@ -35,10 +49,16 @@ public class PaperAirPlane : MonoBehaviour
     }
     public void SetOnMaterial()
     {
+        targetingPoint = Instantiate(targetPosition);
         mat[1].SetFloat("_Thickness", 1.01f);
     }
     public void SetOffMaterial()
     {
+        distance = Vector3.Distance(transform.position, hit.point);
+        time = distance / speed;
+        targetingPoint = null;
+        ps[1].Stop();
+        trailRenderer.enabled = false;
         mat[1].SetFloat("_Thickness", 1f);
     }
     private void OnCollisionEnter(Collision collision)
@@ -71,5 +91,34 @@ public class PaperAirPlane : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Destroy(ob);
+    }
+
+    private void Update()
+    {
+        if (isGrabbed)
+        {
+            if (Physics.Raycast(rayPosition.position, Vector3.forward, out hit, 100f))
+            {
+                targetingPoint.transform.position = hit.point;
+                //표적? UI나오기
+            }
+            else
+            {
+                targetingPoint.transform.position = targetingPoint.transform.position;
+            }
+        }
+
+        if (isThrow)
+        {
+            if (Vector3.Distance(this.transform.position, hit.transform.position) > 0.1f)
+            {
+                transform.DOMove(hit.point, time);
+
+            }
+            else
+            {
+                isThrow = false;
+            }
+        }
     }
 }
