@@ -40,7 +40,7 @@ public class UIManager : Singleton<UIManager>
     private GameObject key1;
     private GameObject key2;
     public GameObject handPose;
-    
+    public GameObject tutoHand;
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -51,6 +51,7 @@ public class UIManager : Singleton<UIManager>
         if (!handPose.activeSelf)
         {
             handPose.SetActive(true);
+            tutoHand.SetActive(true);
         }
     }
     public void SetKeyBoard()
@@ -90,7 +91,7 @@ public class UIManager : Singleton<UIManager>
         
 
         key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, height + offset, key1.transform.position.z), InTime).SetEase(inAniType);
-        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x+chatBoxOffset.x, height + offset + .25f + chatBoxOffset.y, key2.transform.position.z+chatBoxOffset.z), InTime).SetEase(inAniType);
+        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x+chatBoxOffset.x, height + offset+0.182f + chatBoxOffset.y, key2.transform.position.z+chatBoxOffset.z), InTime).SetEase(inAniType);
     }
 
     void SetOffKeyBoard()
