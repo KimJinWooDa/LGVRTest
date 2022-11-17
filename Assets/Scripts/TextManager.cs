@@ -58,21 +58,36 @@ public class TextManager : Singleton<TextManager>
             {
                 UIManager.Instance.tutorialHand.SetActive(false);
             }
-            SpawnPaperAirplane();
+            SpawnPaperAirplane("TEXT");
         }
     }
 
     public GameObject paperAirPlane;
     public Transform player;
-    void SpawnPaperAirplane()
+    public void SpawnPaperAirplane(string type)
     {
-        Destroy(keyBoard);
-        Destroy(textCanvas);
-       
-        GameObject airPlane = Instantiate(paperAirPlane);
-        airPlane.transform.position = player.position;
-        airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
- 
+        if (keyBoard != null)
+        {
+            Destroy(keyBoard);
+            Destroy(textCanvas);
+            UIManager.Instance.isOn = false;
+        }
+
+        if (type == "TEXT")
+        {
+            GameObject airPlane = Instantiate(paperAirPlane);
+            airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
+            airPlane.transform.position = player.position;
+            airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
+
+        }
+        else if (type == "DRAW")
+        {
+            GameObject drawingImage = Instantiate(paperAirPlane);
+            drawingImage.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.draw;
+            drawingImage.transform.position = player.position;
+
+        }
         texts = null;
     }
     

@@ -27,6 +27,15 @@ public class PaperAirPlane : MonoBehaviour
     private float distance;
     [SerializeField] private float time;
     [SerializeField] private float speed;
+    
+    
+    public enum Type
+    {
+        text,
+        draw,
+    }
+
+    public Type airPlaneType;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,6 +65,7 @@ public class PaperAirPlane : MonoBehaviour
     }
     public void SetOffMaterial()
     {
+        UIManager.Instance.SetOnHandPose();
         Destroy(targetingPoint);
         ps[1].Stop();
         trailRenderer.enabled = false;
@@ -65,7 +75,7 @@ public class PaperAirPlane : MonoBehaviour
     private int count = 0;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("YOUTUBER"))
+        if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.text)
         {
             Transform tr = collision.transform;
             PopUpText textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
@@ -73,14 +83,15 @@ public class PaperAirPlane : MonoBehaviour
             tr.GetComponent<YouTuberZoneBgm>().StartBGM();
             textOb.transform.position = this.transform.position;
             textOb.message = transferText;
-            
-           
-            
+
             spawnPs= Instantiate(particle);
             StartCoroutine(WaitDestroy(spawnPs));
             Destroy(this.gameObject);
         }
-
+        else if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.draw)
+        {
+            DrawManager.Instance.SetOnInks(this.transform.position);
+        }
         if (collision.collider.CompareTag("GROUND"))
         {
             trailRenderer.enabled = false;

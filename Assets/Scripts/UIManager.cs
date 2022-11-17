@@ -36,16 +36,23 @@ public class UIManager : Singleton<UIManager>
     [FormerlySerializedAs("player")] public Transform trace;
     public Transform rot;
     public GameObject tutorialHand;
-    private bool isOn;
+    [HideInInspector] public bool isOn;
     private GameObject key1;
     private GameObject key2;
-    
+    public GameObject handPose;
     
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
     }
 
+    public void SetOnHandPose()
+    {
+        if (!handPose.activeSelf)
+        {
+            handPose.SetActive(true);
+        }
+    }
     public void SetKeyBoard()
     {
         if (!isOn)
@@ -66,8 +73,9 @@ public class UIManager : Singleton<UIManager>
     {
         if (tutorialHand != null)
         {
-            tutorialHand.GetComponentInChildren<TextMeshProUGUI>().text =
-                "Clench your Fist to Make the KeyBoard Disappear";
+            //tutorialHand.GetComponentInChildren<TextMeshProUGUI>().text =
+               // "Clench your Fist to Make the KeyBoard Disappear";
+               tutorialHand.SetActive(false);
         }
         isOn = true;
 
@@ -87,10 +95,11 @@ public class UIManager : Singleton<UIManager>
 
     void SetOffKeyBoard()
     {
-        if (tutorialHand != null)
-        {
-            tutorialHand.SetActive(false);
-        }
+        // if (tutorialHand != null)
+        // {
+        //     tutorialHand.SetActive(false);
+        // }
+        handPose.SetActive(true);
         isOn = false;
         key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, -2f, key1.transform.position.z), OutTime).SetEase(outAniType);
         key2.transform.DOLocalMove(new Vector3(key2.transform.position.x, -2f+ .25f, key2.transform.position.z), OutTime).SetEase(outAniType);

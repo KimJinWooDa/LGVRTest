@@ -10,6 +10,7 @@ TagManager:
   - YOUTUBER
   - AIRPLANE
   - GROUND
+  - Paper
   layers:
   - Default
   - TransparentFX

@@ -282,13 +282,16 @@ namespace Oculus.Interaction.HandGrab
             _movement = interactable.GenerateMovement(interactableGrabStartPose, grabPose);
             base.InteractableSelected(interactable);
 
-            GameObject airPlane = interactable.gameObject;
-            if (airPlane != null)
+            GameObject grabbingObject = interactable.gameObject;
+            if (grabbingObject.gameObject.name == "Hand")
             {
-                airPlane.SendMessage("SetOnMat");
+                grabbingObject.SendMessage("SetOnMat");
 
             }
-
+            else if (grabbingObject.gameObject.name == "Pencil")
+            {
+                grabbingObject.SendMessage("DrawingMode", true);
+            }
             
 
         }
@@ -309,13 +312,16 @@ namespace Oculus.Interaction.HandGrab
                 : new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);
             interactable.ApplyVelocities(throwVelocity.LinearVelocity, throwVelocity.AngularVelocity);
             
-            GameObject airPlane = interactable.gameObject;
-            if (airPlane != null)
+            GameObject grabbingObject = interactable.gameObject;
+            if (grabbingObject.gameObject.name == "Hand")
             {
-                airPlane.SendMessage("SetLine");
-                interactable.SendMessage("SetOffMat");
+                grabbingObject.SendMessage("SetLine");
+                grabbingObject.SendMessage("SetOffMat");
             }
-        
+            else if (grabbingObject.gameObject.name == "Pencil")
+            {
+                grabbingObject.SendMessage("DrawingMode", false);
+            }
 
 
         }
