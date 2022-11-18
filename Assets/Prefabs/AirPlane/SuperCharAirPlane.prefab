@@ -707,7 +707,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.006289184, b: 0.6075591, a: 0.9137255}
+      key0: {r: 1, g: 0.006289184, b: 0.6075591, a: 0.32941177}
       key1: {r: 1, g: 0.11725055, b: 0.10062885, a: 0.70980394}
       key2: {r: 1, g: 0.55534315, b: 0.025157154, a: 0.21176471}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -724,7 +724,7 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 47609
+      atime1: 39321
       atime2: 65535
       atime3: 0
       atime4: 0
@@ -2534,8 +2534,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 1
+      scalar: 0.6
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2640,8 +2640,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.4009434, g: 0.9577029, b: 1, a: 0.5882353}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+      minColor: {r: 1, g: 0.51755065, b: 0.39999998, a: 0.5882353}
+      maxColor: {r: 1, g: 0.025157154, b: 0.6994587, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -7409,7 +7409,7 @@ GameObject:
   - component: {fileID: 4707041221068079845}
   - component: {fileID: 6793364882071413296}
   m_Layer: 0
-  m_Name: Final
+  m_Name: SuperCharAirPlane
   m_TagString: AIRPLANE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7462,7 +7462,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -2218434810571812440, guid: da7d18ce9ad34744981b7daafb8abc1b, type: 3}
-  - {fileID: 2100000, guid: 52173bc65ba6bd54787911eb2a8459d8, type: 2}
+  - {fileID: 2100000, guid: a81b43a843585da40b8558a08f3d18f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7697,15 +7697,16 @@ MonoBehaviour:
   ac:
   - {fileID: 8300000, guid: 5f114d84204ab9f4f85880f432b90e34, type: 3}
   - {fileID: 8300000, guid: 3a21f6d66442348489065fe5c95013e1, type: 3}
-  particle: {fileID: 6512142763881403712, guid: 0a31f570219590440bc1fd4bd4288289,
+  particle: {fileID: 6512142763881403712, guid: 9d09f715f82a5b5499f7a11553fb88b1,
     type: 3}
   isGrabbed: 0
   isThrow: 0
   rayPosition: {fileID: 7742402329662037383}
-  targetPosition: {fileID: 9042679511257340894, guid: 33e5f9fd01f3d62478fd15aa60021ef2,
+  targetPosition: {fileID: 9042679511257340894, guid: cce506b251b8f9b42a410f4ba0b616db,
     type: 3}
   time: 2
   speed: 5
+  airPlaneType: 0
 --- !u!114 &6793364882071413296
 MonoBehaviour:
   m_ObjectHideFlags: 0

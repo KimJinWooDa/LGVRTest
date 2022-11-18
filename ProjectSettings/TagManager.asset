@@ -11,6 +11,7 @@ TagManager:
   - AIRPLANE
   - GROUND
   - Paper
+  - Table
   layers:
   - Default
   - TransparentFX

@@ -4822,7 +4822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9073097520819960095}
   m_Layer: 0
-  m_Name: Effect
+  m_Name: NormalAirplaneEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

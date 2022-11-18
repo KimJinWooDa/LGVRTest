@@ -1,20 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Mono.CompilerServices.SymbolWriter;
-using TMPro;
 using UnityEngine;
+
 
 public class DrawingButton : MonoBehaviour
 {
     public GameObject table;
-    private TextMeshProUGUI _textMeshProUGUI;
-
+    public GameObject[] images;
     private bool isOn = false;
-    private void Awake()
-    {
-        _textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
-    }
+
 
     public void DownScale()
     {
@@ -28,6 +20,7 @@ public class DrawingButton : MonoBehaviour
     }
     private void Update()
     {
-        _textMeshProUGUI.text = "Drawing Mode" + System.Environment.NewLine + (isOn ? "On" : "Off");
+        images[0].gameObject.SetActive(isOn);
+        images[1].gameObject.SetActive(!isOn);
     }
 }

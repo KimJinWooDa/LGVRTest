@@ -39,6 +39,8 @@ public class UIManager : Singleton<UIManager>
     [HideInInspector] public bool isOn;
     private GameObject KEYBOARD;
     public GameObject handPose;
+    private bool wait;
+    [HideInInspector] public bool isKeyBoardOn;
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -54,33 +56,39 @@ public class UIManager : Singleton<UIManager>
     }
     public void SetKeyBoard()
     {
-        if (!isOn)
+        if (!wait)
         {
-            SetOnKeyBoard();
-            _audioSource.clip = ac[0];
-            _audioSource.Play();
+            if (!isOn)
+            {
+                SetOnKeyBoard();
+                _audioSource.clip = ac[0];
+                _audioSource.Play();
+            }
+            else
+            {
+                _audioSource.clip = ac[1];
+                _audioSource.Play();
+                SetOffKeyBoard();
+            }
         }
-        else
-        {
-            _audioSource.clip = ac[1];
-            _audioSource.Play();
-            SetOffKeyBoard();
-        }
+        
     }
 
     void SetOnKeyBoard()
     {
         if (tutorialHand != null)
         {
+            handPose.SetActive(false);
             tutorialHand.SetActive(false);
         }
         isOn = true;
-
+        isKeyBoardOn = false;
         KEYBOARD = Instantiate(keyboard, trace.position - new Vector3(0, height + offset, 0), Quaternion.identity * Quaternion.AngleAxis(rot.eulerAngles.y, Vector3.up));
         KEYBOARD.transform.eulerAngles = new Vector3(30f, KEYBOARD.transform.eulerAngles.y, KEYBOARD.transform.eulerAngles.z);
 
-        TextManager.Instance.SetUI(KEYBOARD);
-  
+        TextManager.Instance.KEYBOARD = this.KEYBOARD;
+        TextManager.Instance.SetNormalUI(KEYBOARD);
+        
         KEYBOARD.transform.DOLocalMove(new Vector3(KEYBOARD.transform.position.x, height + offset, KEYBOARD.transform.position.z), InTime).SetEase(inAniType);
         
     }
@@ -91,7 +99,7 @@ public class UIManager : Singleton<UIManager>
         // {
         //     tutorialHand.SetActive(false);
         // }
-        handPose.SetActive(true);
+        if(!isKeyBoardOn) handPose.SetActive(true);
         isOn = false;
         KEYBOARD.transform.DOLocalMove(new Vector3(KEYBOARD.transform.position.x, -2f, KEYBOARD.transform.position.z), OutTime).SetEase(outAniType);
  
@@ -100,7 +108,9 @@ public class UIManager : Singleton<UIManager>
 
     IEnumerator WaitSetOff()
     {
+        wait = true;
         yield return new WaitForSeconds(OutTime + 0.1f);
+        wait = false;
         Destroy(KEYBOARD);
     }
 

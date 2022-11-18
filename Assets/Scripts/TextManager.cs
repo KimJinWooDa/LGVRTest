@@ -3,24 +3,40 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TextManager : Singleton<TextManager>
 {
     [Header("메세지보여지기위한")]
-    private TextMeshProUGUI Message;
+    private TextMeshProUGUI NormalMessage;
+    private GameObject noramlTextCanvas; 
+    private TextMeshProUGUI SuperChatMessage;
+    private GameObject SuperChatTextCanvas;
+
+    public GameObject KEYBOARD;
+    
     private string texts;
     [Space(10)]
-    [Header("세팅끝")] 
-    private GameObject textCanvas; 
-    private GameObject keyBoard;
+    [Header("세팅끝")]
     public GameObject UI; //삭제하지마
- 
-    public void SetUI(GameObject key)
+
+    private bool isOn;
+    public void SetNormalUI(GameObject keyboard)
     {
-        this.keyBoard = key;
-        this.textCanvas = keyBoard.transform.GetChild(4).gameObject;
-        Message = textCanvas.GetComponentInChildren<TextMeshProUGUI>();
-        Message.text = null;
+        texts = null; //초기화
+        isOn = false;
+        this.noramlTextCanvas = keyboard.transform.GetChild(4).gameObject;
+        NormalMessage = noramlTextCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        NormalMessage.text = null;
+    }
+
+    public void SetSuperChatUI(GameObject keyboard)
+    {
+        texts = null; //초기화
+        isOn = true;
+        this.SuperChatTextCanvas = keyboard.transform.GetChild(5).gameObject;
+        SuperChatMessage = SuperChatTextCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        SuperChatMessage.text = null;
     }
     public void GetMessage(string message)
     {
@@ -29,7 +45,7 @@ public class TextManager : Singleton<TextManager>
             UIManager.Instance.SetKeyBoard();
             return;
         }
-        if (message != "ENTER" && textCanvas != null)
+        if (message != "ENTER" && noramlTextCanvas != null)
         {
             if (message == "ESC")
             {
@@ -55,32 +71,41 @@ public class TextManager : Singleton<TextManager>
             {
                 UIManager.Instance.tutorialHand.SetActive(false);
             }
-            SpawnPaperAirplane("TEXT");
+            if(!isOn) SpawnPaperAirplane("NORMAL");
+            else SpawnPaperAirplane("SUPER");
         }
     }
 
-    public GameObject paperAirPlane;
+    [FormerlySerializedAs("paperAirPlane")] public GameObject normalAirPlane;
+    public GameObject superAirPlane;
     public Transform player;
+    
     public void SpawnPaperAirplane(string type)
     {
-        if (keyBoard != null)
+        if (KEYBOARD != null)
         {
-            Destroy(keyBoard);
-            Destroy(textCanvas);
+            Destroy(KEYBOARD);
             UIManager.Instance.isOn = false;
         }
 
-        if (type == "TEXT")
+        if (type == "NORMAL")
         {
-            GameObject airPlane = Instantiate(paperAirPlane);
+            GameObject airPlane = Instantiate(normalAirPlane);
             airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
             airPlane.transform.position = player.position;
             airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
 
         }
+        else if (type == "SUPER")
+        {
+            GameObject airPlane = Instantiate(superAirPlane);
+            airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
+            airPlane.transform.position = player.position;
+            airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
+        }
         else if (type == "DRAW")
         {
-            GameObject drawingImage = Instantiate(paperAirPlane);
+            GameObject drawingImage = Instantiate(normalAirPlane);
             drawingImage.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.draw;
             drawingImage.transform.position = player.position;
 
@@ -90,6 +115,7 @@ public class TextManager : Singleton<TextManager>
     
     private void Update()
     {
-        if(textCanvas != null) Message.text = texts;
+        if (!isOn && NormalMessage != null) NormalMessage.text = texts;
+        else if(isOn && SuperChatMessage != null) SuperChatMessage.text = texts;
     }
 }

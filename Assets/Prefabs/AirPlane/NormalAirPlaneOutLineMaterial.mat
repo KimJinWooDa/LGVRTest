@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutLineMaterial
+  m_Name: NormalAirPlaneOutLineMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 4770645f4e8b0de4492d84458a7763fc,
     type: 3}
   m_ValidKeywords: []
