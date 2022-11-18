@@ -10,20 +10,17 @@ public class TextManager : Singleton<TextManager>
     private TextMeshProUGUI Message;
     private string texts;
     [Space(10)]
-    [Header("세팅끝")]
-    public GameObject textCanvas;
-    public GameObject keyBoard;
+    [Header("세팅끝")] 
+    private GameObject textCanvas; 
+    private GameObject keyBoard;
     public GameObject UI; //삭제하지마
-    public void SetTextCanvas(GameObject Canvas)
-    {
-        this.textCanvas = Canvas;
-        Message = textCanvas.GetComponentInChildren<TextMeshProUGUI>();
-        Message.text = null;
-    }
-
-    public void SetKeyBoard(GameObject key)
+ 
+    public void SetUI(GameObject key)
     {
         this.keyBoard = key;
+        this.textCanvas = keyBoard.transform.GetChild(4).gameObject;
+        Message = textCanvas.GetComponentInChildren<TextMeshProUGUI>();
+        Message.text = null;
     }
     public void GetMessage(string message)
     {

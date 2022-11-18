@@ -32,15 +32,13 @@ public class UIManager : Singleton<UIManager>
     
     [Space(10)]
     [Header("!!!!!아래 부터 건들No!!!!!!!!!")]
-    public GameObject[] keyboard;
+    public GameObject keyboard;
     [FormerlySerializedAs("player")] public Transform trace;
     public Transform rot;
     public GameObject tutorialHand;
     [HideInInspector] public bool isOn;
-    private GameObject key1;
-    private GameObject key2;
+    private GameObject KEYBOARD;
     public GameObject handPose;
-    public GameObject tutoHand;
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -51,7 +49,7 @@ public class UIManager : Singleton<UIManager>
         if (!handPose.activeSelf)
         {
             handPose.SetActive(true);
-            tutoHand.SetActive(true);
+            tutorialHand.SetActive(true);
         }
     }
     public void SetKeyBoard()
@@ -74,24 +72,17 @@ public class UIManager : Singleton<UIManager>
     {
         if (tutorialHand != null)
         {
-            //tutorialHand.GetComponentInChildren<TextMeshProUGUI>().text =
-               // "Clench your Fist to Make the KeyBoard Disappear";
-               tutorialHand.SetActive(false);
+            tutorialHand.SetActive(false);
         }
         isOn = true;
 
-        key1 = Instantiate(keyboard[0], trace.position - new Vector3(0, height + offset, 0), Quaternion.identity * Quaternion.AngleAxis(rot.eulerAngles.y, Vector3.up));
-        key1.transform.eulerAngles = new Vector3(30f, key1.transform.eulerAngles.y, key1.transform.eulerAngles.z);
-    
-         key2 = Instantiate(keyboard[1], trace.position - new Vector3(0, height + offset, 0),
-            Quaternion.identity * Quaternion.AngleAxis(rot.eulerAngles.y, Vector3.up));
-        
-        TextManager.Instance.SetKeyBoard(key1);
-        TextManager.Instance.SetTextCanvas(key2);
-        
+        KEYBOARD = Instantiate(keyboard, trace.position - new Vector3(0, height + offset, 0), Quaternion.identity * Quaternion.AngleAxis(rot.eulerAngles.y, Vector3.up));
+        KEYBOARD.transform.eulerAngles = new Vector3(30f, KEYBOARD.transform.eulerAngles.y, KEYBOARD.transform.eulerAngles.z);
 
-        key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, height + offset, key1.transform.position.z), InTime).SetEase(inAniType);
-        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x+chatBoxOffset.x, height + offset+0.182f + chatBoxOffset.y, key2.transform.position.z+chatBoxOffset.z), InTime).SetEase(inAniType);
+        TextManager.Instance.SetUI(KEYBOARD);
+  
+        KEYBOARD.transform.DOLocalMove(new Vector3(KEYBOARD.transform.position.x, height + offset, KEYBOARD.transform.position.z), InTime).SetEase(inAniType);
+        
     }
 
     void SetOffKeyBoard()
@@ -102,16 +93,15 @@ public class UIManager : Singleton<UIManager>
         // }
         handPose.SetActive(true);
         isOn = false;
-        key1.transform.DOLocalMove(new Vector3(key1.transform.position.x, -2f, key1.transform.position.z), OutTime).SetEase(outAniType);
-        key2.transform.DOLocalMove(new Vector3(key2.transform.position.x, -2f+ .25f, key2.transform.position.z), OutTime).SetEase(outAniType);
-        StartCoroutine(WaitSetOff());
+        KEYBOARD.transform.DOLocalMove(new Vector3(KEYBOARD.transform.position.x, -2f, KEYBOARD.transform.position.z), OutTime).SetEase(outAniType);
+ 
+        StartCoroutine(WaitSetOff()); //약간 수정
     }
 
     IEnumerator WaitSetOff()
     {
         yield return new WaitForSeconds(OutTime + 0.1f);
-        Destroy(key1);
-        Destroy(key2);
+        Destroy(KEYBOARD);
     }
 
     private void Update()
