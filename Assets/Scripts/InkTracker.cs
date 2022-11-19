@@ -12,6 +12,7 @@ public class InkTracker : MonoBehaviour
     //variable to store drawing threshold
     [SerializeField] private float drawingThreshold = 0.001f;
 
+    public Vector3 offset;
     private void Awake()
     {
         this.lineRenderer = GetComponent<LineRenderer>();

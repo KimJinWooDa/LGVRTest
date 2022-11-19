@@ -21,26 +21,36 @@ public class InkGenerator: Singleton<InkGenerator>
     private GameObject newInk = null;
 
     public bool isOn;
-    
-  
 
+
+    private Vector3 originPos;
+    private Vector3 laterPos;
+    private Vector3 offset = Vector3.zero;
     private void Update()
     {
-        // if the pencil is touching and ink is not there, instantiate ink and get its comnponent
+        
         if (isOn && isTouching && newInk == null)
         {
+            if (originPos != laterPos)
+            {
+                offset = laterPos - originPos;
+                    originPos = laterPos;
+            }
             newInk = Instantiate(inkPrefab);
+            
             ink = newInk.GetComponent<InkTracker>();
+            laterPos = ink.transform.position;
+            ink.offset = offset;
             DrawManager.Instance.Inks.Add(ink);
             DrawManager.Instance.count++;
         }
-        // if the pencil is touching and there is ink, the update the ink as per the pencil and paper position
+      
         if (isOn && isTouching && newInk != null)
         {
             Vector3 pos = new Vector3(pencilTransform.position.x, pencilTransform.position.y, pencilTransform.position.z);
             ink.UpdateLineRenderer(pos + pencilOffset);
         }
-        // if the pencil is not touching the paper,set the variable to null
+
         if (!isTouching)
             newInk = null;
     }

@@ -39,8 +39,26 @@ public class TextManager : Singleton<TextManager>
         SuperChatMessage = SuperChatTextCanvas.GetComponentInChildren<TextMeshProUGUI>();
         SuperChatMessage.text = null;
     }
+
+    public bool isChangeProfile;
     public void GetMessage(string message)
     {
+        if (isChangeProfile)
+        {
+            if (message == "ESC")
+            {
+                ChangeUserProfile.Instance.userName[0].text = ChangeUserProfile.Instance.userName[0].text.Substring(0, texts.Length - 1);
+                ChangeUserProfile.Instance.userName[1].text = ChangeUserProfile.Instance.userName[1].text.Substring(0, texts.Length - 1);
+            }
+            if (isChangeProfile)
+            {
+                ChangeUserProfile.Instance.SetSuccessInfo();
+                return;
+            }
+            ChangeUserProfile.Instance.userName[0].text += message;
+            ChangeUserProfile.Instance.userName[1].text += message;
+            return;
+        }
         if (message == "CLOSE")
         {
             UIManager.Instance.SetKeyBoard();
@@ -71,6 +89,12 @@ public class TextManager : Singleton<TextManager>
             if (UIManager.Instance.tutorialHand != null)
             {
                 UIManager.Instance.tutorialHand.SetActive(false);
+            }
+
+            if (isChangeProfile)
+            {
+                ChangeUserProfile.Instance.SetSuccessInfo();
+                return;
             }
             if(!isOn) SpawnPaperAirplane("NORMAL");
             else SpawnPaperAirplane("SUPER");

@@ -2048,6 +2048,7 @@ MonoBehaviour:
   KEYBOARD: {fileID: 0}
   UI: {fileID: 1040493437353962812, guid: 7840c56c675bbc54780adebc7c2ea0d2, type: 3}
   superUI: {fileID: 7077724281200726850, guid: ccb0f13774f40634793f8b03e0b8ab7a, type: 3}
+  isChangeProfile: 0
   normalAirPlane: {fileID: 7288003883604542767, guid: b67045fbf92a26643a62de8b7e07e334,
     type: 3}
   superAirPlane: {fileID: 7288003883604542767, guid: 22ea2d991b5b00a4e80506632eda3e5e,

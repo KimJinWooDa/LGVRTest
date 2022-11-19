@@ -54,7 +54,8 @@ public class DrawManager : Singleton<DrawManager>
         foreach (var item in copyInks)
         {
             item.gameObject.SetActive(true);
-            item.transform.localPosition = endPos; //이 부분만 약간 수정
+            item.transform.position = endPos; //이 부분만 약간 수정
+            item.transform.position += item.GetComponent<InkTracker>().offset;
         }
     }
 

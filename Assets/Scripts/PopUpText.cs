@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,8 +21,13 @@ public class PopUpText : MonoBehaviour
         userName  = child.GetChild(1).GetComponent<TextMeshProUGUI>();
         timeText  = child.GetChild(3).GetComponent<TextMeshProUGUI>();
         image.sprite = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
+       
+    }
+
+    private void Update()
+    {
+
         tmpo.text = message;
         timeText.text = time;
     }
-    
 }
