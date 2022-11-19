@@ -22,7 +22,7 @@ public class PaperAirPlane : MonoBehaviour
     public GameObject targetPosition;
     private GameObject targetingPoint;
     private Rigidbody rb;
-    
+    public bool isSuper;
     
     private float distance;
     [SerializeField] private float time;
@@ -78,12 +78,25 @@ public class PaperAirPlane : MonoBehaviour
         if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.text)
         {
             Transform tr = collision.transform;
-            PopUpText textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
-            textOb.GetComponent<Canvas>().sortingOrder = count++;
-            tr.GetComponent<YouTuberZoneBgm>().StartBGM();
-            textOb.transform.position = this.transform.position;
-            textOb.message = transferText;
-
+            if (!isSuper)
+            {
+                PopUpText textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
+                textOb.GetComponent<Canvas>().sortingOrder = count++;
+                tr.GetComponent<YouTuberZoneBgm>().StartBGM();
+                textOb.transform.position = this.transform.position;
+                textOb.message = transferText;
+                textOb.time = DateTime.Now.ToString("HH:mm:ss zz");
+            }
+            else
+            {
+                PopUpText textOb = Instantiate(TextManager.Instance.superUI).GetComponent<PopUpText>();
+                textOb.GetComponent<Canvas>().sortingOrder = count++;
+                tr.GetComponent<YouTuberZoneBgm>().StartBGM();
+                textOb.transform.position = this.transform.position;
+                textOb.message = transferText;
+                textOb.time = DateTime.Now.ToString("HH:mm:ss zz");
+            }
+            
             spawnPs= Instantiate(particle);
             StartCoroutine(WaitDestroy(spawnPs));
             Destroy(this.gameObject);

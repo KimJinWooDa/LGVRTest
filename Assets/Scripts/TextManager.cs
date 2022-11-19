@@ -19,7 +19,8 @@ public class TextManager : Singleton<TextManager>
     [Space(10)]
     [Header("세팅끝")]
     public GameObject UI; //삭제하지마
-
+    public GameObject superUI;
+    
     private bool isOn;
     public void SetNormalUI(GameObject keyboard)
     {
@@ -91,6 +92,7 @@ public class TextManager : Singleton<TextManager>
         if (type == "NORMAL")
         {
             GameObject airPlane = Instantiate(normalAirPlane);
+            airPlane.GetComponent<PaperAirPlane>().isSuper = false;
             airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
             airPlane.transform.position = player.position;
             airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
@@ -99,6 +101,7 @@ public class TextManager : Singleton<TextManager>
         else if (type == "SUPER")
         {
             GameObject airPlane = Instantiate(superAirPlane);
+            airPlane.GetComponent<PaperAirPlane>().isSuper = true;
             airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
             airPlane.transform.position = player.position;
             airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1121,6 +1121,62 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 372176915}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &381939128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381939129}
+  - component: {fileID: 381939130}
+  m_Layer: 0
+  m_Name: UserInfoManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &381939129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381939128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007839626}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &381939130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381939128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7506cb29fc42540b5350397cf2b7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userName: 
+  userProfileImage:
+  - {fileID: 21300000, guid: c8fa696ae0e16ac4c9e8bd29b6c2e850, type: 3}
+  - {fileID: 21300000, guid: 0048b8130eac0504ea0a6d5c956ef9d5, type: 3}
+  - {fileID: 21300000, guid: 0b3f959e413d84e4f832c4f950ad74ac, type: 3}
+  - {fileID: 21300000, guid: a69f1ad9f4fce7041ae2c39c9df77c46, type: 3}
+  - {fileID: 21300000, guid: ae2c0da5dffc882418d0cbf0a3d7e3ba, type: 3}
+  - {fileID: 21300000, guid: d8727a206d76dd9498ee3bdffda9feff, type: 3}
+  - {fileID: 21300000, guid: a3db64bc6706a994eaf3ccf940c184ed, type: 3}
+  - {fileID: 21300000, guid: cefc5db632abe6640a624266fd249773, type: 3}
+  - {fileID: 21300000, guid: 113419d0555b3d74b9c2f3bb2ed5aa31, type: 3}
+  currentIndex: 0
 --- !u!1 &403516974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,7 +1932,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.77
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1990,7 +2046,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KEYBOARD: {fileID: 0}
-  UI: {fileID: 132450783603770616, guid: b4fef3f16611ecc49b627773fab9987b, type: 3}
+  UI: {fileID: 1040493437353962812, guid: 7840c56c675bbc54780adebc7c2ea0d2, type: 3}
+  superUI: {fileID: 7077724281200726850, guid: ccb0f13774f40634793f8b03e0b8ab7a, type: 3}
   normalAirPlane: {fileID: 7288003883604542767, guid: b67045fbf92a26643a62de8b7e07e334,
     type: 3}
   superAirPlane: {fileID: 7288003883604542767, guid: 22ea2d991b5b00a4e80506632eda3e5e,
@@ -4448,6 +4505,7 @@ Transform:
   - {fileID: 917626341}
   - {fileID: 1854857758}
   - {fileID: 1338560118}
+  - {fileID: 381939129}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,20 +1,27 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopUpText : MonoBehaviour
 {
-    public TextMeshProUGUI tmpo;
+    private Image image;
+    private TextMeshProUGUI tmpo;
+    private TextMeshProUGUI userName;
+    private TextMeshProUGUI timeText;
     public string message;
+    public string time;
+    
     private void Start()
     {
-        tmpo = GetComponentInChildren<TextMeshProUGUI>();
-    }
-
-    private void Update()
-    {
+        var child = this.gameObject.transform.GetChild(0);
+        image = GetComponent<Image>();
+        
+        tmpo = child.GetChild(2).GetComponent<TextMeshProUGUI>();
+        userName  = child.GetChild(1).GetComponent<TextMeshProUGUI>();
+        timeText  = child.GetChild(3).GetComponent<TextMeshProUGUI>();
+        image.sprite = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
         tmpo.text = message;
+        timeText.text = time;
     }
+    
 }

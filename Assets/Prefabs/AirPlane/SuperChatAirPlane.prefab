@@ -7409,7 +7409,7 @@ GameObject:
   - component: {fileID: 4707041221068079845}
   - component: {fileID: 6793364882071413296}
   m_Layer: 0
-  m_Name: SuperCharAirPlane
+  m_Name: SuperChatAirPlane
   m_TagString: AIRPLANE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
