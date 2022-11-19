@@ -72,7 +72,11 @@ public class TextManager : Singleton<TextManager>
             }
             else if (message == "ENTER")
             {
-                ChangeUserProfile.Instance.SetSuccessInfo();
+                return;
+            }
+            else if (message == "CLOSE")
+            {
+                UIManager.Instance.SetKeyBoard();
                 return;
             }
             else
@@ -125,6 +129,11 @@ public class TextManager : Singleton<TextManager>
         }
     }
 
+    public void ChangeProfile()
+    {
+        ChangeUserProfile.Instance.SetSuccessInfo();
+        UserInfoManager.Instance.userName = texts;
+    }
     [FormerlySerializedAs("paperAirPlane")] public GameObject normalAirPlane;
     public GameObject superAirPlane;
     public Transform player;

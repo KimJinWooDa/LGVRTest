@@ -23,4 +23,9 @@ public class ChangeUserProfile : Singleton<ChangeUserProfile>
         userProfileKeyPad.SetActive(false);
         TextManager.Instance.isChangeProfile = false;
     }
+
+    public void SetDoneInfo()
+    {
+        TextManager.Instance.ChangeProfile();
+    }
 }
