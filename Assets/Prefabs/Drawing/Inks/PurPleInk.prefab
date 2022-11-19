@@ -53,7 +53,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6042a6a0648efa14286ad835241a0725, type: 2}
+  - {fileID: 2100000, guid: 90a06ea8e68160e438fe94e3398fb188, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,3 +145,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawingThreshold: 0.001
+  pencilPos: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
