@@ -9,6 +9,7 @@ public class PopUpText : MonoBehaviour
     private TextMeshProUGUI tmpo;
     private TextMeshProUGUI userName;
     private TextMeshProUGUI timeText;
+    
     public string message;
     public string time;
     public string name;
@@ -31,4 +32,11 @@ public class PopUpText : MonoBehaviour
         timeText.text = time;
     }
 
+    private void Update()
+    {
+        image.sprite = profile;
+        userName.text = name;
+        tmpo.text = message;
+        timeText.text = time;
+    }
 }
