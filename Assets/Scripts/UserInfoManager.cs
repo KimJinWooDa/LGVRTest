@@ -9,7 +9,6 @@ public class UserInfoManager : Singleton<UserInfoManager>
     
     private void Start()
     {
-        userName = "Jinwoo";
         currentIndex = 0;
         
     }

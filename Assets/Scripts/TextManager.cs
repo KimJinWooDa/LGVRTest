@@ -16,6 +16,7 @@ public class TextManager : Singleton<TextManager>
     public GameObject KEYBOARD;
     
     private string texts;
+    [SerializeField] private string userNameText;
     [Space(10)]
     [Header("세팅끝")]
     public GameObject UI; //삭제하지마
@@ -46,6 +47,7 @@ public class TextManager : Singleton<TextManager>
     {
         if (isChangeProfile)
         {
+            ChangeUserProfile.Instance.isChange = false;
             var one = ChangeUserProfile.Instance.userName[0];
             var two = ChangeUserProfile.Instance.userName[1];
             if (!isOnce)
@@ -57,82 +59,86 @@ public class TextManager : Singleton<TextManager>
             
             if (message == "ESC")
             {
-                one.text = one.text.Substring(0, one.text.Length - 1);
-                two.text = two.text.Substring(0, two.text.Length - 1);
+                userNameText = userNameText.Substring(0, userNameText.Length - 1);
+                one.text = userNameText;
+                two.text = userNameText;
+                UserInfoManager.Instance.GetUserName(userNameText);
             }
             else if (message == "CLEAR")
             {
                 one.text = null;
                 two.text = null;
+                UserInfoManager.Instance.userName = null;
             }
             else if (message == "SPACEBAR")
             {
                 one.text += " ";
                 two.text += " ";
+                UserInfoManager.Instance.userName += " ";
+            }
+            else if (message == "CLOSE")
+            {
+                UIManager.Instance.SetKeyBoard();
             }
             else if (message == "ENTER")
             {
                 return;
             }
-            else if (message == "CLOSE")
+            else
+            {
+                userNameText += message;
+                one.text += message;
+                two.text += message;
+                UserInfoManager.Instance.userName += message;
+            }
+        }
+        else
+        {
+            if (message == "CLOSE")
             {
                 UIManager.Instance.SetKeyBoard();
                 return;
             }
-            else
+            if (message != "ENTER" && noramlTextCanvas != null)
             {
-                one.text += message;
-                two.text += message;
-            }
-            
-            return;
-        }
-        if (message == "CLOSE")
-        {
-            UIManager.Instance.SetKeyBoard();
-            return;
-        }
-        if (message != "ENTER" && noramlTextCanvas != null)
-        {
-            if (message == "ESC")
-            {
-                texts = texts.Substring(0, texts.Length - 1);
-            }
-            else if (message == "SPACEBAR")
-            {
-                texts += " ";
-            }
-            else if (message == "CLEAR")
-            {
-                texts = null; //초기화
+                if (message == "ESC")
+                {
+                    texts = texts.Substring(0, texts.Length - 1);
+                }
+                else if (message == "SPACEBAR")
+                {
+                    texts += " ";
+                }
+                else if (message == "CLEAR")
+                {
+                    texts = null; //초기화
+                }
+                else
+                {
+                    texts += message;
+                }
+
             }
             else
             {
-                texts += message;
-            }
+                if (UIManager.Instance.tutorialHand != null)
+                {
+                    UIManager.Instance.tutorialHand.SetActive(false);
+                }
 
-        }
-        else
-        {
-            if (UIManager.Instance.tutorialHand != null)
-            {
-                UIManager.Instance.tutorialHand.SetActive(false);
+                if(!isOn) SpawnPaperAirplane("NORMAL");
+                else SpawnPaperAirplane("SUPER");
             }
-
-            if (isChangeProfile)
-            {
-                ChangeUserProfile.Instance.SetSuccessInfo();
-                return;
-            }
-            if(!isOn) SpawnPaperAirplane("NORMAL");
-            else SpawnPaperAirplane("SUPER");
         }
+   
     }
 
     public void ChangeProfile()
     {
+        //UserInfoManager.Instance.userName = texts;
+        //UserInfoManager.Instance.GetUserName(texts);
         ChangeUserProfile.Instance.SetSuccessInfo();
-        UserInfoManager.Instance.userName = texts;
+        
     }
     [FormerlySerializedAs("paperAirPlane")] public GameObject normalAirPlane;
     public GameObject superAirPlane;
