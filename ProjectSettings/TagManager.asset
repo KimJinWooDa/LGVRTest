@@ -13,6 +13,11 @@ TagManager:
   - Paper
   - Table
   - ZONE
+  - PINK
+  - YELLOW
+  - GREEN
+  - BLUE
+  - PURPLE
   layers:
   - Default
   - TransparentFX

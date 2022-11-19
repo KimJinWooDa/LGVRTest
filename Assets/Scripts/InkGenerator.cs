@@ -28,7 +28,7 @@ public class InkGenerator: Singleton<InkGenerator>
     private Vector3 offset = Vector3.zero;
     private void Update()
     {
-        
+        if (inkPrefab == null) return;
         if (isOn && isTouching && newInk == null)
         {
             if (originPos != laterPos)
