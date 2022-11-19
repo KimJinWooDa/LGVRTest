@@ -80,27 +80,30 @@ public class PaperAirPlane : MonoBehaviour
             Transform tr = collision.transform;
             if (!isSuper)
             {
-                PopUpText textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
-                textOb.GetComponent<Canvas>().sortingOrder = count++;
+                var textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
+                textOb.GetComponent<Canvas>().sortingOrder = count;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
                 textOb.transform.position = this.transform.position;
                 textOb.profile = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
                 textOb.name = name;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
+                textOb.GetInfo();
             }
             else
             {
-                PopUpText textOb = Instantiate(TextManager.Instance.superUI).GetComponent<PopUpText>();
-                textOb.GetComponent<Canvas>().sortingOrder = count++;
+                var textOb = Instantiate(TextManager.Instance.superUI).GetComponent<PopUpText>();
+                textOb.GetComponent<Canvas>().sortingOrder = count;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
                 textOb.profile = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
                 textOb.name = name;
                 textOb.transform.position = this.transform.position;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
+                textOb.GetInfo();
             }
-            
+
+            count++;
             spawnPs= Instantiate(particle);
             StartCoroutine(WaitDestroy(spawnPs));
             Destroy(this.gameObject);

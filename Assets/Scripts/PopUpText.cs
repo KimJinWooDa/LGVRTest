@@ -21,15 +21,18 @@ public class PopUpText : MonoBehaviour
         tmpo = child.GetChild(2).GetComponent<TextMeshProUGUI>();
         userName  = child.GetChild(1).GetComponent<TextMeshProUGUI>();
         timeText  = child.GetChild(3).GetComponent<TextMeshProUGUI>();
-        
-       
+
     }
 
-    private void Update()
+    public void GetInfo()
     {
         image.sprite = profile;
         userName.text = name;
         tmpo.text = message;
         timeText.text = time;
+    }
+    private void Update()
+    {
+        
     }
 }
