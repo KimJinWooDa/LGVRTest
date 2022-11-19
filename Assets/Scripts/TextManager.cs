@@ -41,12 +41,20 @@ public class TextManager : Singleton<TextManager>
     }
 
     public bool isChangeProfile;
+    public bool isOnce;
     public void GetMessage(string message)
     {
         if (isChangeProfile)
         {
             var one = ChangeUserProfile.Instance.userName[0];
             var two = ChangeUserProfile.Instance.userName[1];
+            if (!isOnce)
+            {
+                one.text = null;
+                two.text = null;
+                isOnce = true;
+            }
+            
             if (message == "ESC")
             {
                 one.text = one.text.Substring(0, one.text.Length - 1);
@@ -67,8 +75,12 @@ public class TextManager : Singleton<TextManager>
                 ChangeUserProfile.Instance.SetSuccessInfo();
                 return;
             }
-            one.text += message;
-            two.text += message;
+            else
+            {
+                one.text += message;
+                two.text += message;
+            }
+            
             return;
         }
         if (message == "CLOSE")

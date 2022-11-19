@@ -2060,6 +2060,7 @@ MonoBehaviour:
   superUI: {fileID: 7077724281200726850, guid: ccb0f13774f40634793f8b03e0b8ab7a, type: 3}
   count: 0
   isChangeProfile: 0
+  isOnce: 0
   normalAirPlane: {fileID: 7288003883604542767, guid: b67045fbf92a26643a62de8b7e07e334,
     type: 3}
   superAirPlane: {fileID: 7288003883604542767, guid: 22ea2d991b5b00a4e80506632eda3e5e,
@@ -3267,7 +3268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1665639601
 MonoBehaviour:
   m_ObjectHideFlags: 0
