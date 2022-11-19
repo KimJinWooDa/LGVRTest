@@ -2735,6 +2735,7 @@ MonoBehaviour:
   isOn: 0
   handPose: {fileID: 403516974}
   isKeyBoardOn: 0
+  isOnce: 0
 --- !u!4 &885617510
 Transform:
   m_ObjectHideFlags: 0
@@ -11507,6 +11508,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 6093052923164991084, guid: b8965bd0eb7390f4ab2776d42adef97c, type: 3}
+  - {fileID: 2100000, guid: 50501014810af1943972764346c247a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
