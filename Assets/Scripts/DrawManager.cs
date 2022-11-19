@@ -54,14 +54,24 @@ public class DrawManager : Singleton<DrawManager>
         foreach (var item in copyInks)
         {
             item.gameObject.SetActive(true);
-            item.transform.position = endPos; //이 부분만 약간 수정
+            var offset = item.GetComponent<InkTracker>().pencilPos;
+            item.transform.position = endPos - offset; 
+           
             item.transform.position += item.GetComponent<InkTracker>().offset;
+
         }
+        copyInks.Clear();
+        Inks.Clear();
     }
 
     public void SpawnAirPlane()
     {
-        copyInks = Inks; //얕은 복사개념 들어가야함
+        foreach (var VARIABLE in Inks)
+        {
+            copyInks.Add(VARIABLE);
+        }
+       // copyInks = Inks; //얕은 복사개념 들어가야함
+       
         TextManager.Instance.SpawnPaperAirplane("DRAW");
     }
 }

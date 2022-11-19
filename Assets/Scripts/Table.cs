@@ -11,7 +11,7 @@ public class Table : MonoBehaviour
 
     private void Awake()
     {
-        //originPos = crayon.transform.localPosition;
+       this.gameObject.SetActive(false);
     }
 
     private void OnEnable()

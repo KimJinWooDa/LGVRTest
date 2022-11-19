@@ -11,7 +11,7 @@ public class InkTracker : MonoBehaviour
     private List<Vector3> points = new List<Vector3>();
     //variable to store drawing threshold
     [SerializeField] private float drawingThreshold = 0.001f;
-
+    public Vector3 pencilPos;
     public Vector3 offset;
     private void Awake()
     {

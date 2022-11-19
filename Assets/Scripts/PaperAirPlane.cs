@@ -106,7 +106,7 @@ public class PaperAirPlane : MonoBehaviour
         }
         else if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.draw)
         {
-            DrawManager.Instance.SetOnInks(this.transform.localPosition);
+            DrawManager.Instance.SetOnInks(this.transform.position);
             spawnPs= Instantiate(particle);
             Destroy(this.gameObject);
         }

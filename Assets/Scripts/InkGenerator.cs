@@ -37,17 +37,18 @@ public class InkGenerator: Singleton<InkGenerator>
                     originPos = laterPos;
             }
             newInk = Instantiate(inkPrefab);
-            
+           
             ink = newInk.GetComponent<InkTracker>();
             laterPos = ink.transform.position;
             ink.offset = offset;
+            ink.pencilPos =  pencilTransform.position;
             DrawManager.Instance.Inks.Add(ink);
             DrawManager.Instance.count++;
         }
       
         if (isOn && isTouching && newInk != null)
         {
-            Vector3 pos = new Vector3(pencilTransform.position.x, pencilTransform.position.y, pencilTransform.position.z);
+            var pos = pencilTransform.position;
             ink.UpdateLineRenderer(pos + pencilOffset);
         }
 

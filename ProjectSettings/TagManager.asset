@@ -12,6 +12,7 @@ TagManager:
   - GROUND
   - Paper
   - Table
+  - ZONE
   layers:
   - Default
   - TransparentFX

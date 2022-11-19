@@ -25,7 +25,7 @@ public class TextManager : Singleton<TextManager>
     private bool isOn;
     public void SetNormalUI(GameObject keyboard)
     {
-        texts = null; //초기화
+        texts = null; 
         isOn = false;
         this.noramlTextCanvas = keyboard.transform.GetChild(4).gameObject;
         NormalMessage = noramlTextCanvas.GetComponentInChildren<TextMeshProUGUI>();
@@ -34,7 +34,7 @@ public class TextManager : Singleton<TextManager>
 
     public void SetSuperChatUI(GameObject keyboard)
     {
-        texts = null; //초기화
+        texts = null;
         isOn = true;
         this.SuperChatTextCanvas = keyboard.transform.GetChild(5).gameObject;
         SuperChatMessage = SuperChatTextCanvas.GetComponentInChildren<TextMeshProUGUI>();
@@ -59,7 +59,11 @@ public class TextManager : Singleton<TextManager>
             
             if (message == "ESC")
             {
-                userNameText = userNameText.Substring(0, userNameText.Length - 1);
+                if (userNameText!=null)
+                {
+                    userNameText = userNameText.Substring(0, userNameText.Length - 1);
+                }
+                
                 one.text = userNameText;
                 two.text = userNameText;
                 UserInfoManager.Instance.GetUserName(userNameText);
@@ -103,7 +107,10 @@ public class TextManager : Singleton<TextManager>
             {
                 if (message == "ESC")
                 {
-                    texts = texts.Substring(0, texts.Length - 1);
+                    if (texts != null)
+                    {
+                        texts = texts.Substring(0, texts.Length - 1);
+                    }
                 }
                 else if (message == "SPACEBAR")
                 {
@@ -135,8 +142,6 @@ public class TextManager : Singleton<TextManager>
 
     public void ChangeProfile()
     {
-        //UserInfoManager.Instance.userName = texts;
-        //UserInfoManager.Instance.GetUserName(texts);
         ChangeUserProfile.Instance.SetSuccessInfo();
         
     }
