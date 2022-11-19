@@ -16,7 +16,7 @@ public class PopUpText : MonoBehaviour
     private void Start()
     {
         var child = this.gameObject.transform.GetChild(0);
-        image = child.GetComponentInChildren<Image>();
+        image = child.GetChild(0).GetComponent<Image>();
         tmpo = child.GetChild(2).GetComponent<TextMeshProUGUI>();
         userName  = child.GetChild(1).GetComponent<TextMeshProUGUI>();
         timeText  = child.GetChild(3).GetComponent<TextMeshProUGUI>();
