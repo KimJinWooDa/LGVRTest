@@ -12,6 +12,8 @@ public class ChangeUserProfile : Singleton<ChangeUserProfile>
     public void SetInfo()
     {
         userProfileKeyPad.SetActive(true);
+        userName[0].text = null;
+        userName[1].text = null;
         TextManager.Instance.isChangeProfile = true;
     }
 

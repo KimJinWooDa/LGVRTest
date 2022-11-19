@@ -50,7 +50,7 @@ public class TextManager : Singleton<TextManager>
                 ChangeUserProfile.Instance.userName[0].text = ChangeUserProfile.Instance.userName[0].text.Substring(0, texts.Length - 1);
                 ChangeUserProfile.Instance.userName[1].text = ChangeUserProfile.Instance.userName[1].text.Substring(0, texts.Length - 1);
             }
-            if (isChangeProfile)
+            if (message == "ENTER")
             {
                 ChangeUserProfile.Instance.SetSuccessInfo();
                 return;

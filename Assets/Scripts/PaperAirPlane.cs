@@ -84,6 +84,7 @@ public class PaperAirPlane : MonoBehaviour
                 textOb.GetComponent<Canvas>().sortingOrder = count++;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
                 textOb.transform.position = this.transform.position;
+                textOb.profile = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
                 textOb.name = name;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
@@ -93,6 +94,7 @@ public class PaperAirPlane : MonoBehaviour
                 PopUpText textOb = Instantiate(TextManager.Instance.superUI).GetComponent<PopUpText>();
                 textOb.GetComponent<Canvas>().sortingOrder = count++;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
+                textOb.profile = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
                 textOb.name = name;
                 textOb.transform.position = this.transform.position;
                 textOb.message = transferText;

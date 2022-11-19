@@ -12,6 +12,7 @@ public class PopUpText : MonoBehaviour
     public string message;
     public string time;
     public string name;
+    public Sprite profile;
     private void Start()
     {
         var child = this.gameObject.transform.GetChild(0);
@@ -20,13 +21,13 @@ public class PopUpText : MonoBehaviour
         tmpo = child.GetChild(2).GetComponent<TextMeshProUGUI>();
         userName  = child.GetChild(1).GetComponent<TextMeshProUGUI>();
         timeText  = child.GetChild(3).GetComponent<TextMeshProUGUI>();
-        image.sprite = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
+        
        
     }
 
     private void Update()
     {
-   
+        image.sprite = profile;
         userName.text = name;
         tmpo.text = message;
         timeText.text = time;
