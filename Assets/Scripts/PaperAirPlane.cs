@@ -72,7 +72,7 @@ public class PaperAirPlane : MonoBehaviour
         mat[1].SetFloat("_Thickness", 1f);
     }
 
-    private int count = 0;
+   
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.text)
@@ -81,52 +81,40 @@ public class PaperAirPlane : MonoBehaviour
             if (!isSuper)
             {
                 var textOb = Instantiate(TextManager.Instance.UI).GetComponent<PopUpText>();
-                textOb.GetComponent<Canvas>().sortingOrder = count;
+                textOb.GetComponent<Canvas>().sortingOrder = TextManager.Instance.count++;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
                 textOb.transform.position = this.transform.position;
                 textOb.profile = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
-                textOb.name = name;
+                textOb.name = UserInfoManager.Instance.userName;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
-                //textOb.GetInfo(); 
             }
             else
             {
                 var textOb = Instantiate(TextManager.Instance.superUI).GetComponent<PopUpText>();
-                textOb.GetComponent<Canvas>().sortingOrder = count;
+                textOb.GetComponent<Canvas>().sortingOrder = TextManager.Instance.count++;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
                 textOb.profile = UserInfoManager.Instance.userProfileImage[UserInfoManager.Instance.currentIndex];
-                textOb.name = name;
+                textOb.name = UserInfoManager.Instance.userName;
                 textOb.transform.position = this.transform.position;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
-                //textOb.GetInfo();
             }
 
-            count++;
             spawnPs= Instantiate(particle);
-            StartCoroutine(WaitDestroy(spawnPs));
             Destroy(this.gameObject);
         }
         else if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.draw)
         {
-            DrawManager.Instance.SetOnInks(this.transform.position);
+            DrawManager.Instance.SetOnInks(this.transform.localPosition);
             spawnPs= Instantiate(particle);
-            StartCoroutine(WaitDestroy(spawnPs));
             Destroy(this.gameObject);
         }
         if (collision.collider.CompareTag("GROUND"))
         {
             trailRenderer.enabled = false;
             ps[1].Stop();
-            //StartCoroutine(WaitDestroy());
         }
-    }
-
-    IEnumerator WaitDestroy(GameObject ob)
-    {
-        yield return new WaitForSeconds(1f);
-        Destroy(ob);
     }
 
     private void Update()

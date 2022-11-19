@@ -4821,6 +4821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9073097520819960095}
+  - component: {fileID: 6828304515471196625}
   m_Layer: 0
   m_Name: SuperChatAirPlaneEffect
   m_TagString: Untagged
@@ -4844,3 +4845,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6828304515471196625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512142763881403712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b360fd21601c9479818c243ab2e1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -10,8 +10,8 @@ public class ChangeUserProfile : Singleton<ChangeUserProfile>
     public void SetInfo()
     {
         userProfileKeyPad.SetActive(true);
-        userName[0].text = null;
-        userName[1].text = null;
+        userName[0].text = "Enter Nickname" + System.Environment.NewLine + "(3-20)";
+        userName[1].text = "Enter Nickname" + System.Environment.NewLine + "(3-20)";
         TextManager.Instance.isChangeProfile = true;
     }
 

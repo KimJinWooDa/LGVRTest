@@ -23,14 +23,7 @@ public class PopUpText : MonoBehaviour
         timeText  = child.GetChild(3).GetComponent<TextMeshProUGUI>();
 
     }
-
-    public void GetInfo()
-    {
-        image.sprite = profile;
-        userName.text = name;
-        tmpo.text = message;
-        timeText.text = time;
-    }
+    
 
     private void Update()
     {
