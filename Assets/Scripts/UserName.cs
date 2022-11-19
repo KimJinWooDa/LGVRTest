@@ -12,8 +12,4 @@ public class UserName : MonoBehaviour
         text = GetComponent<TextMeshProUGUI>();
     }
 
-    void Update()
-    {
-        //text.text = UserInfoManager.Instance.userName;
-    }
 }

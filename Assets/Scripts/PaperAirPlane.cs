@@ -88,7 +88,7 @@ public class PaperAirPlane : MonoBehaviour
                 textOb.name = name;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
-                textOb.GetInfo();
+                textOb.GetInfo(); //여기안됨
             }
             else
             {

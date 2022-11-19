@@ -45,18 +45,30 @@ public class TextManager : Singleton<TextManager>
     {
         if (isChangeProfile)
         {
+            var one = ChangeUserProfile.Instance.userName[0];
+            var two = ChangeUserProfile.Instance.userName[1];
             if (message == "ESC")
             {
-                ChangeUserProfile.Instance.userName[0].text = ChangeUserProfile.Instance.userName[0].text.Substring(0, texts.Length - 1);
-                ChangeUserProfile.Instance.userName[1].text = ChangeUserProfile.Instance.userName[1].text.Substring(0, texts.Length - 1);
+                one.text = one.text.Substring(0, one.text.Length - 1);
+                two.text = two.text.Substring(0, two.text.Length - 1);
             }
-            if (message == "ENTER")
+            else if (message == "CLEAR")
+            {
+                one.text = null;
+                two.text = null;
+            }
+            else if (message == "SPACEBAR")
+            {
+                one.text += " ";
+                two.text += " ";
+            }
+            else if (message == "ENTER")
             {
                 ChangeUserProfile.Instance.SetSuccessInfo();
                 return;
             }
-            ChangeUserProfile.Instance.userName[0].text += message;
-            ChangeUserProfile.Instance.userName[1].text += message;
+            one.text += message;
+            two.text += message;
             return;
         }
         if (message == "CLOSE")
