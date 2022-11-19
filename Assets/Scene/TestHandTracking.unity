@@ -2539,6 +2539,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 687074351}
     m_Modifications:
+    - target: {fileID: 394511174651607032, guid: 5ece885c7a3062248824765affb3dbce,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ddb1964b5c20aaf48b928a2d0e0ed19c, type: 2}
     - target: {fileID: 654966750657096606, guid: 5ece885c7a3062248824765affb3dbce,
         type: 3}
       propertyPath: m_IsActive
@@ -2665,11 +2670,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brushColor:
-  - {fileID: 2100000, guid: 6042a6a0648efa14286ad835241a0725, type: 2}
-  - {fileID: 2100000, guid: 649b373ecd0e7b14daed4c1ca9659716, type: 2}
-  - {fileID: 2100000, guid: 895000893fab4d7408471f5e488601ab, type: 2}
-  - {fileID: 2100000, guid: ed8f54313f01f654e9ce2a4fda76c81b, type: 2}
-  - {fileID: 2100000, guid: 90a06ea8e68160e438fe94e3398fb188, type: 2}
+  - {fileID: 2100000, guid: 4d79d5fdd636433479505270c45827de, type: 2}
+  - {fileID: 2100000, guid: 2675828ead7b2f645b64a3daaa821e7e, type: 2}
+  - {fileID: 2100000, guid: 506c7c7f0a222124397e561702b9478c, type: 2}
+  - {fileID: 2100000, guid: 7719dbc02ba7a534c9e74f286132b6b6, type: 2}
+  - {fileID: 2100000, guid: ddb1964b5c20aaf48b928a2d0e0ed19c, type: 2}
   inkColor:
   - {fileID: 4476527243364266072, guid: 7e5bdc08e9c212f43b3017c03727e60a, type: 3}
   - {fileID: 4476527243364266072, guid: 0accdc203ae14ac49904d926fd714a9b, type: 3}
@@ -12649,7 +12654,7 @@ MonoBehaviour:
   inkPrefab: {fileID: 0}
   pencilTransform: {fileID: 588664324}
   pencilOffset: {x: 0, y: 0, z: 0}
-  palette: {fileID: 0}
+  palette: {fileID: 866200250}
   isTouching: 0
   isOn: 0
 --- !u!4 &4243978313888950888
