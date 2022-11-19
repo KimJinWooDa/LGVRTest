@@ -19,5 +19,6 @@ public class Table : MonoBehaviour
         //crayon.transform.localPosition = originPos;
         bubbles[0].SetActive(true);
         bubbles[1].SetActive(false);
+        crayon.GetComponent<InkGenerator>().inkPrefab = null;
     }
 }

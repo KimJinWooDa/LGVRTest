@@ -5,19 +5,18 @@ using UnityEngine;
 
 public class InkGenerator: Singleton<InkGenerator>
 {
-    // variable to store ink prefab
-    [SerializeField] private GameObject inkPrefab;
-    // variable to store pencil transform
+    public GameObject inkPrefab;
+
     [SerializeField] private Transform pencilTransform;
-  
-    // variable to store pencil offset
+
     [SerializeField] private Vector3 pencilOffset;
-    
-    // variable to store ink component
+
+    [SerializeField] private GameObject palette;
+
     private InkTracker ink;
-    // variable to capture the touch
+ 
     public bool isTouching = false;
-    // variableto store the newly created ink
+
     private GameObject newInk = null;
 
     public bool isOn;
@@ -26,6 +25,13 @@ public class InkGenerator: Singleton<InkGenerator>
     private Vector3 originPos;
     private Vector3 laterPos;
     private Vector3 offset = Vector3.zero;
+
+    private Material mat;
+    private void Start()
+    {
+        mat = GetComponent<Renderer>().material;
+    }
+
     private void Update()
     {
         if (inkPrefab == null) return;
@@ -54,5 +60,34 @@ public class InkGenerator: Singleton<InkGenerator>
 
         if (!isTouching)
             newInk = null;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("YELLOW"))
+        {
+            this.inkPrefab = Palette.Instance.inkColor[1];
+            mat = Palette.Instance.brushColor[1];
+        }
+        else if (other.CompareTag("PINK"))
+        {
+            this.inkPrefab = Palette.Instance.inkColor[0];
+            mat = Palette.Instance.brushColor[0];
+        }
+        else if (other.CompareTag("GREEN"))
+        {
+            this.inkPrefab = Palette.Instance.inkColor[2];
+            mat = Palette.Instance.brushColor[2];
+        }
+        else if (other.CompareTag("BLUE"))
+        {
+            this.inkPrefab = Palette.Instance.inkColor[3];
+            mat = Palette.Instance.brushColor[3];
+        }
+        else if (other.CompareTag("PURPLE"))
+        {
+            this.inkPrefab = Palette.Instance.inkColor[4];
+            mat = Palette.Instance.brushColor[4];
+        }
     }
 }

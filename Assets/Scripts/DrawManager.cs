@@ -11,10 +11,12 @@ public class DrawManager : Singleton<DrawManager>
     public List<InkTracker> copyInks;
     public GameObject table;
     public GameObject crayon;
+    public GameObject palette;
     public Transform originPos;
     private Quaternion originRot;
     public void SetOnTable()
     {
+        palette.SetActive(true);
         table.SetActive(true);
         originRot = crayon.transform.rotation;
         StartCoroutine(waitSaveOriginPos());
@@ -66,6 +68,7 @@ public class DrawManager : Singleton<DrawManager>
 
     public void SpawnAirPlane()
     {
+        palette.SetActive(false);
         foreach (var VARIABLE in Inks)
         {
             copyInks.Add(VARIABLE);
