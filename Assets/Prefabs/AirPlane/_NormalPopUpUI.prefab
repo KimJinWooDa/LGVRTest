@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: 
   time: 
+  name: 
 --- !u!114 &137403634919585720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,7 +587,6 @@ GameObject:
   - component: {fileID: 1789735545834230526}
   - component: {fileID: 1789735545834230512}
   - component: {fileID: 1789735545834230513}
-  - component: {fileID: 1789735545834230515}
   m_Layer: 0
   m_Name: UserName
   m_TagString: Untagged
@@ -711,18 +711,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1789735545834230515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789735545834230527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f97c3f60d2db4fe40bfca7727bfa9f30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1789735547390283478
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +722,6 @@ GameObject:
   - component: {fileID: 1789735547390283465}
   - component: {fileID: 1789735547390283467}
   - component: {fileID: 1789735547390283464}
-  - component: {fileID: 1789735547390283466}
   m_Layer: 0
   m_Name: UserProfile
   m_TagString: Untagged
@@ -800,15 +787,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1789735547390283466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789735547390283478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d8ac17f3fd8654b8ceb8931f70d253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

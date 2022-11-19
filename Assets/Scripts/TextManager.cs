@@ -115,12 +115,12 @@ public class TextManager : Singleton<TextManager>
 
         if (type == "NORMAL")
         {
-            GameObject airPlane = Instantiate(normalAirPlane);
-            airPlane.GetComponent<PaperAirPlane>().isSuper = false;
-            airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
+            var airPlane = Instantiate(normalAirPlane).GetComponent<PaperAirPlane>();
+            airPlane.isSuper = false;
+            airPlane.airPlaneType = PaperAirPlane.Type.text;
             airPlane.transform.position = player.position;
             airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
-
+            airPlane.name = UserInfoManager.Instance.userName;
         }
         else if (type == "SUPER")
         {
@@ -129,6 +129,7 @@ public class TextManager : Singleton<TextManager>
             airPlane.GetComponent<PaperAirPlane>().airPlaneType = PaperAirPlane.Type.text;
             airPlane.transform.position = player.position;
             airPlane.GetComponentInChildren<PaperAirPlane>().transferText = texts;
+            airPlane.name = UserInfoManager.Instance.userName;
         }
         else if (type == "DRAW")
         {

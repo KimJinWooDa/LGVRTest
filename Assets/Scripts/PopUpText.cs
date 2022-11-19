@@ -11,7 +11,7 @@ public class PopUpText : MonoBehaviour
     private TextMeshProUGUI timeText;
     public string message;
     public string time;
-    
+    public string name;
     private void Start()
     {
         var child = this.gameObject.transform.GetChild(0);
@@ -26,7 +26,8 @@ public class PopUpText : MonoBehaviour
 
     private void Update()
     {
-
+   
+        userName.text = name;
         tmpo.text = message;
         timeText.text = time;
     }

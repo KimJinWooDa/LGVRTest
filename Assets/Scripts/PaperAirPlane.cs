@@ -84,17 +84,19 @@ public class PaperAirPlane : MonoBehaviour
                 textOb.GetComponent<Canvas>().sortingOrder = count++;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
                 textOb.transform.position = this.transform.position;
+                textOb.name = name;
                 textOb.message = transferText;
-                textOb.time = DateTime.Now.ToString("HH:mm:ss zz");
+                textOb.time = DateTime.Now.ToString("HH:mm");
             }
             else
             {
                 PopUpText textOb = Instantiate(TextManager.Instance.superUI).GetComponent<PopUpText>();
                 textOb.GetComponent<Canvas>().sortingOrder = count++;
                 tr.GetComponent<YouTuberZoneBgm>().StartBGM();
+                textOb.name = name;
                 textOb.transform.position = this.transform.position;
                 textOb.message = transferText;
-                textOb.time = DateTime.Now.ToString("HH:mm:ss zz");
+                textOb.time = DateTime.Now.ToString("HH:mm");
             }
             
             spawnPs= Instantiate(particle);
