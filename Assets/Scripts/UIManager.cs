@@ -54,6 +54,10 @@ public class UIManager : Singleton<UIManager>
             tutorialHand.SetActive(true);
         }
     }
+
+    public bool isOnce;
+
+    
     public void SetKeyBoard()
     {
         if (!wait)

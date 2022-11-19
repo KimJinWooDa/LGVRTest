@@ -17,4 +17,8 @@ public class KeyBoardManager : MonoBehaviour
         UIManager.Instance.SetKeyBoard();
         DrawManager.Instance.SetOnTable();
     }
+    public void ChangeInitProfile()
+    {
+        UIManager.Instance.isOnce = true;
+    }
 }

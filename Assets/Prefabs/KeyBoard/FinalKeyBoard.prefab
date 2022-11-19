@@ -1459,6 +1459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97c3f60d2db4fe40bfca7727bfa9f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 6638339398444947559}
 --- !u!1 &2038687819427280615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97c3f60d2db4fe40bfca7727bfa9f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 2946957649699269183}
 --- !u!1 &2900959445746649046
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +5409,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7771911758089222338}
+        m_TargetAssemblyTypeName: KeyBoardManager, Assembly-CSharp
+        m_MethodName: ChangeInitProfile
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
