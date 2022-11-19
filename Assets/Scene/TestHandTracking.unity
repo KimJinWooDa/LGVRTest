@@ -2543,7 +2543,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ddb1964b5c20aaf48b928a2d0e0ed19c, type: 2}
+      objectReference: {fileID: -2816575871155357938, guid: 03a3d45a60b91e84f9866d74cae81f30,
+        type: 3}
     - target: {fileID: 654966750657096606, guid: 5ece885c7a3062248824765affb3dbce,
         type: 3}
       propertyPath: m_IsActive
@@ -2672,8 +2673,8 @@ MonoBehaviour:
   brushColor:
   - {fileID: 2100000, guid: 4d79d5fdd636433479505270c45827de, type: 2}
   - {fileID: 2100000, guid: 2675828ead7b2f645b64a3daaa821e7e, type: 2}
-  - {fileID: 2100000, guid: 506c7c7f0a222124397e561702b9478c, type: 2}
   - {fileID: 2100000, guid: 7719dbc02ba7a534c9e74f286132b6b6, type: 2}
+  - {fileID: 2100000, guid: 506c7c7f0a222124397e561702b9478c, type: 2}
   - {fileID: 2100000, guid: ddb1964b5c20aaf48b928a2d0e0ed19c, type: 2}
   inkColor:
   - {fileID: 4476527243364266072, guid: 7e5bdc08e9c212f43b3017c03727e60a, type: 3}

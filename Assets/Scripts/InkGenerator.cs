@@ -68,6 +68,7 @@ public class InkGenerator: Singleton<InkGenerator>
         {
             this.inkPrefab = Palette.Instance.inkColor[1];
             mat = Palette.Instance.brushColor[1];
+            
         }
         else if (other.CompareTag("PINK"))
         {
@@ -89,5 +90,7 @@ public class InkGenerator: Singleton<InkGenerator>
             this.inkPrefab = Palette.Instance.inkColor[4];
             mat = Palette.Instance.brushColor[4];
         }
+
+        GetComponent<Renderer>().material = mat;
     }
 }
