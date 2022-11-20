@@ -12,7 +12,7 @@ public class ChangeUserProfile : Singleton<ChangeUserProfile>
     {
         UserInfoManager.Instance.userName = null;
         TextManager.Instance.isOnce = false;
-        TextManager.Instance.GetMessage(" ");
+        //TextManager.Instance.GetMessage(" ");
         userProfileKeyPad.SetActive(true);
         TextManager.Instance.isChangeProfile = true;
         isChange = true;

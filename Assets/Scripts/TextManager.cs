@@ -59,10 +59,15 @@ public class TextManager : Singleton<TextManager>
             
             if (message == "ESC")
             {
+                if (userNameText.Length <= 1)
+                {
+                    userNameText = null;
+                }
                 if (userNameText!=null)
                 {
                     userNameText = userNameText.Substring(0, userNameText.Length - 1);
                 }
+                
                 
                 one.text = userNameText;
                 two.text = userNameText;
@@ -90,10 +95,14 @@ public class TextManager : Singleton<TextManager>
             }
             else
             {
-                userNameText += message;
-                one.text += message;
-                two.text += message;
-                UserInfoManager.Instance.userName += message;
+                if (message != null)
+                {
+                    userNameText += message;
+                    one.text += message;
+                    two.text += message;
+                    UserInfoManager.Instance.userName += message;
+                }
+                
             }
         }
         else

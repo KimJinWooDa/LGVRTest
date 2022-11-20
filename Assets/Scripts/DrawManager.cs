@@ -60,10 +60,11 @@ public class DrawManager : Singleton<DrawManager>
             item.transform.position = endPos - offset; 
            
             item.transform.position += item.GetComponent<InkTracker>().offset;
-
+            item.GetComponent<LineRenderer>().sortingOrder = TextManager.Instance.count;
         }
         copyInks.Clear();
         Inks.Clear();
+        TextManager.Instance.count++;
     }
 
     public void SpawnAirPlane()

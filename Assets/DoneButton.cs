@@ -13,9 +13,11 @@ public class DoneButton : MonoBehaviour
 
     private void Update()
     {
-        setActiveBtns[0].SetActive(UserInfoManager.Instance.userName.Length <= 0 );
-        setActiveBtns[1].SetActive(UserInfoManager.Instance.userName.Length > 0);
+        if (!TextManager.Instance.isChangeProfile) return;
+        
+        setActiveBtns[0].SetActive(UserInfoManager.Instance.userName == null);
+        setActiveBtns[1].SetActive(UserInfoManager.Instance.userName != null);
 
-        _pokeInteractable.enabled = UserInfoManager.Instance.userName.Length > 0;
+        //_pokeInteractable.enabled = UserInfoManager.Instance.userName.Length > 0;
     }
 }
