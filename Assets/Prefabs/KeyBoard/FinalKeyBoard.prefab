@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 8558107098289078618}
   m_Father: {fileID: 7905464874835552253}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214544821965306397
 GameObject:
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 2052821800969286627}
   - component: {fileID: 7019474529852633440}
   - component: {fileID: 1295095142871588700}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2231,7 +2231,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6670142071060691630}
+      - m_Target: {fileID: 3036653710434648930}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4324,7 +4324,7 @@ Transform:
   m_Children:
   - {fileID: 8077714124392808615}
   m_Father: {fileID: 7905464874835552253}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4857533919598741701
 GameObject:
@@ -33887,7 +33887,7 @@ GameObject:
   - component: {fileID: 2173345955087974208}
   - component: {fileID: 3744713000389848101}
   - component: {fileID: 8849145600823029228}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Chat+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33908,7 +33908,7 @@ RectTransform:
   m_Children:
   - {fileID: 2052821800969286627}
   m_Father: {fileID: 7905464874835552253}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -33934,7 +33934,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &3744713000389848101
 MonoBehaviour:
@@ -36220,7 +36220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7905464874835552253}
   m_Layer: 0
-  m_Name: RightPad
+  m_Name: Chat+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36238,9 +36238,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1.1155, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4939775721703406299}
   - {fileID: 9126354751401482796}
   - {fileID: 3110729714887700060}
-  - {fileID: 4939775721703406299}
   m_Father: {fileID: 659152662776501443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

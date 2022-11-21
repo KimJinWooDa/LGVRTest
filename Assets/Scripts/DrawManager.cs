@@ -78,4 +78,14 @@ public class DrawManager : Singleton<DrawManager>
        
         TextManager.Instance.SpawnPaperAirplane("DRAW");
     }
+    public InkGenerator brush;
+    public GameObject supportBrush;
+    public GameObject[] bubbles;
+    public void InitBrushSetting()
+    {
+        brush.isTouching = false;
+        supportBrush.GetComponent<SupportPencil>().isOnce = false;
+        bubbles[0].SetActive(true);
+        bubbles[1].SetActive(false);
+    }
 }

@@ -468,6 +468,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: 
   time: 
+  name: 
+  profile: {fileID: 0}
 --- !u!114 &7458226894336138970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,7 +645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8fa696ae0e16ac4c9e8bd29b6c2e850, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -948,3 +950,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97c3f60d2db4fe40bfca7727bfa9f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}

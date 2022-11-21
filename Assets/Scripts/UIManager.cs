@@ -60,6 +60,9 @@ public class UIManager : Singleton<UIManager>
     
     public void SetKeyBoard()
     {
+        ChangeUserProfile.Instance.isChange = false;
+        isOnce = false;
+        UserInfoManager.Instance.userName = null;
         if (!wait)
         {
             if (!isOn)
@@ -99,10 +102,6 @@ public class UIManager : Singleton<UIManager>
 
     void SetOffKeyBoard()
     {
-        // if (tutorialHand != null)
-        // {
-        //     tutorialHand.SetActive(false);
-        // }
         if(!isKeyBoardOn) handPose.SetActive(true);
         isOn = false;
         KEYBOARD.transform.DOLocalMove(new Vector3(KEYBOARD.transform.position.x, -2f, KEYBOARD.transform.position.z), OutTime).SetEase(outAniType);
@@ -117,14 +116,7 @@ public class UIManager : Singleton<UIManager>
         wait = false;
         Destroy(KEYBOARD);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SetKeyBoard();
-        }
-    }
+    
 }
 
 

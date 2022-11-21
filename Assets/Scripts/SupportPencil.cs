@@ -4,7 +4,7 @@ public class SupportPencil : MonoBehaviour
 {
     public InkGenerator ink;
     public GameObject[] bubbles;
-    private bool isOnce;
+    public bool isOnce;
     public AudioSource _audioSource;
     public void DrawingMode(bool isOn)
     {
