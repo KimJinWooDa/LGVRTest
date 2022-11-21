@@ -3,14 +3,24 @@ using UnityEngine;
 public class Youtuber : Singleton<Youtuber>
 {
     public Transform youtuber;
-
-
-    public void BeSponsored()
+    
+    public void Donation()
     {
-        //youtuber.GetComponent<Animator>().SetTrigger("후원");
+        int RandomAnimation = Random.Range(0, 2);
+        switch (RandomAnimation)
+        {
+            case 0:
+                youtuber.GetComponent<Animator>().SetTrigger("Thank");
+                break;
+            case 1:
+                youtuber.GetComponent<Animator>().SetTrigger("Dance");
+                break;
+        }
     }
-    public void Greet()
+    
+    public void Happy() //그림메모 받았을 때
     {
-        //youtuber.GetComponent<Animator>().SetTrigger("후원");
+        youtuber.GetComponent<Animator>().SetTrigger("Thank"); 
     }
+
 }

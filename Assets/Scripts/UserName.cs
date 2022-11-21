@@ -26,7 +26,7 @@ public class UserName : MonoBehaviour
                     _doTweenAnimation.DOPlay();
                 }
        
-                panel.gameObject.SetActive(true);
+                if(panel!=null) panel.gameObject.SetActive(true);
             }
             else
             {

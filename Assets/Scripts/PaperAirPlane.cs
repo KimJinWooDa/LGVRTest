@@ -100,7 +100,7 @@ public class PaperAirPlane : MonoBehaviour
                 textOb.transform.position = this.transform.position;
                 textOb.message = transferText;
                 textOb.time = DateTime.Now.ToString("HH:mm");
-                //Youtuber.Instance.BeSponserd;
+                Youtuber.Instance.Donation();
             }
 
             spawnPs= Instantiate(particle);
@@ -108,7 +108,7 @@ public class PaperAirPlane : MonoBehaviour
         }
         else if (collision.collider.CompareTag("YOUTUBER") && airPlaneType == Type.draw)
         {
-            //Youtuber.Instance.Greet();
+            Youtuber.Instance.Happy();
             DrawManager.Instance.SetOnInks(this.transform.position);
             spawnPs= Instantiate(particle);
             Destroy(this.gameObject);
