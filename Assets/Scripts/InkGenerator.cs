@@ -15,11 +15,11 @@ public class InkGenerator: Singleton<InkGenerator>
 
     private InkTracker ink;
  
-    public bool isTouching = false;
+    [HideInInspector] public bool isTouching = false;
 
     private GameObject newInk = null;
 
-    public bool isOn;
+    [HideInInspector] public bool isOn;
 
 
     private Vector3 originPos;

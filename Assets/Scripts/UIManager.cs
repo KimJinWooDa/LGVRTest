@@ -32,13 +32,13 @@ public class UIManager : Singleton<UIManager>
     
     [Space(10)]
     [Header("!!!!!아래 부터 건들No!!!!!!!!!")]
-    public GameObject keyboard;
+     public GameObject keyboard;
     [FormerlySerializedAs("player")] public Transform trace;
-    public Transform rot;
-    public GameObject tutorialHand;
+    [HideInInspector] public Transform rot;
+    [HideInInspector] public GameObject tutorialHand;
     [HideInInspector] public bool isOn;
     private GameObject KEYBOARD;
-    public GameObject handPose;
+    [HideInInspector] public GameObject handPose;
     private bool wait;
     [HideInInspector] public bool isKeyBoardOn;
     private void Start()
@@ -55,7 +55,7 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-    public bool isOnce;
+    [HideInInspector] public bool isOnce;
 
     
     public void SetKeyBoard()

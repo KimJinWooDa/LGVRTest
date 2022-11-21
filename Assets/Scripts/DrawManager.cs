@@ -26,7 +26,7 @@ public class DrawManager : Singleton<DrawManager>
         yield return new WaitForSeconds(0.2f);
         originPos = this.originPos;
         crayon.transform.position = originPos.position;
-        crayon.transform.localEulerAngles = new Vector3(63.362f, -84.411f, -51.997f);
+       //crayon.transform.localEulerAngles = new Vector3(63.362f, -84.411f, -51.997f);
     }
     public void ClearInks()
     {

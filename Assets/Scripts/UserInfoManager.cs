@@ -5,7 +5,7 @@ public class UserInfoManager : Singleton<UserInfoManager>
     public string userName;
     public Sprite[] userProfileImage;
 
-    public int currentIndex = 0;
+    [HideInInspector] public int currentIndex = 0;
     
     private void Start()
     {

@@ -21,7 +21,7 @@ public class TextManager : Singleton<TextManager>
     [Header("세팅끝")]
     public GameObject UI; //삭제하지마
     public GameObject superUI;
-    public int count = 0;
+    [HideInInspector] public int count = 0;
     private bool isOn;
     public void SetNormalUI(GameObject keyboard)
     {
@@ -41,8 +41,8 @@ public class TextManager : Singleton<TextManager>
         SuperChatMessage.text = null;
     }
 
-    public bool isChangeProfile;
-    public bool isOnce;
+    [HideInInspector] public bool isChangeProfile;
+    [HideInInspector] public bool isOnce;
     public void GetMessage(string message)
     {
         if (isChangeProfile)
