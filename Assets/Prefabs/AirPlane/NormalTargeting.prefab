@@ -61,14 +61,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18970656, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.26220584, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300278, guid: 7f186a9ac091755489927d745be0185a, type: 3}
+  m_Sprite: {fileID: 7456325119316076576, guid: 64f884351318b694f942625580e64a8b,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -124,7 +125,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 1
+  duration: 0.7
   easeType: 8
   easeCurve:
     serializedVersion: 2
@@ -232,7 +233,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0
-  duration: 1
+  duration: 0.7
   easeType: 1
   easeCurve:
     serializedVersion: 2

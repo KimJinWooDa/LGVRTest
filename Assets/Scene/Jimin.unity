@@ -499,7 +499,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235593266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -550,8 +550,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235593266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2124, y: 2.12, z: 6.11}
-  m_LocalScale: {x: 6.2561264, y: 2.5422, z: 5}
+  m_LocalPosition: {x: 0.2124, y: 2.12, z: 6.76}
+  m_LocalScale: {x: 7.9127483, y: 2.5422, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2339,6 +2339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089966496789217445, guid: a36889c302bb5ce4292527f57ea93a6b,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089966496789217445, guid: a36889c302bb5ce4292527f57ea93a6b,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 16
       objectReference: {fileID: 0}
@@ -3185,7 +3190,7 @@ Material:
     - _EmisColor: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 0.38039216}
+    - _TintColor: {r: 1, g: 1, b: 1, a: 0.8117647}
   m_BuildTextureStacks: []
 --- !u!1 &820351689
 GameObject:
@@ -15019,8 +15024,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3295764228973347568}
-  m_LocalRotation: {x: 0.000000014901154, y: -0, z: 0.000000029802308, w: 1}
-  m_LocalPosition: {x: 0.00000020234921, y: -0.000000004203173, z: 0.000000061193596}
+  m_LocalRotation: {x: -0.000000029802308, y: -0.000000029802308, z: -0.000000059604616,
+    w: 1}
+  m_LocalPosition: {x: 0.00000025973347, y: 0.000000046408957, z: 0.000000034194542}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
