@@ -35,7 +35,9 @@ public class UIManager : Singleton<UIManager>
      public GameObject keyboard;
     [FormerlySerializedAs("player")] public Transform trace;
     [HideInInspector] public Transform rot;
-    [HideInInspector] public GameObject tutorialHand;
+    public GameObject originTutorialHand;
+    public GameObject fakeHand;
+    public GameObject tutorialHand;
     [HideInInspector] public bool isOn;
     private GameObject KEYBOARD;
     [HideInInspector] public GameObject handPose;
@@ -51,7 +53,9 @@ public class UIManager : Singleton<UIManager>
         if (!handPose.activeSelf)
         {
             handPose.SetActive(true);
-            tutorialHand.SetActive(true);
+            fakeHand = Instantiate(tutorialHand, trace);
+            fakeHand.SetActive(true);
+            //tutorialHand.SetActive(true);
         }
     }
 
@@ -86,7 +90,15 @@ public class UIManager : Singleton<UIManager>
         if (tutorialHand != null)
         {
             handPose.SetActive(false);
-            tutorialHand.SetActive(false);
+            if (originTutorialHand != null)
+            {
+                Destroy(originTutorialHand.gameObject);
+            }
+
+            if (fakeHand != null)
+            {
+                Destroy(fakeHand.gameObject);
+            }
         }
         isOn = true;
         isKeyBoardOn = false;
