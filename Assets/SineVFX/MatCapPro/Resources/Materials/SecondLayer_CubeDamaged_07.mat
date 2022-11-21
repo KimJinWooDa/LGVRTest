@@ -51,7 +51,7 @@ Material:
     - _EdgeMaskPower: -7
     - _EdgesOnlyModeEnabled: 0
     - _FinalAlpha: 1
-    - _FinalOpacity: 0.936
+    - _FinalOpacity: 0.618
     - _FinalOpacityDitherEnabled: 1
     - _FinalPower: 1
     - _Float0: 0.1
@@ -79,5 +79,5 @@ Material:
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _OpacityTextureChannel: {r: 0, g: 0, b: 0, a: 1}
-    - _RampColorTint: {r: 1, g: 1, b: 1, a: 1}
+    - _RampColorTint: {r: 0.023584902, g: 0.06698706, b: 1, a: 1}
   m_BuildTextureStacks: []

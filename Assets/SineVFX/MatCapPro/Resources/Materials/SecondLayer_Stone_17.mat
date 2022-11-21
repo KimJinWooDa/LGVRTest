@@ -51,7 +51,7 @@ Material:
     - _EdgeMaskPower: 100
     - _EdgesOnlyModeEnabled: 0
     - _FinalAlpha: 1
-    - _FinalOpacity: 0.549
+    - _FinalOpacity: 0.386
     - _FinalOpacityDitherEnabled: 1
     - _FinalOpacityMaskPower: 0
     - _FinalOpacityPower: 0
@@ -73,13 +73,13 @@ Material:
     - _TessValue: 16
     - _UseDitherForOpacity: 0
     - _WireframeEnabled: 1
-    - _WireframeFresnelExp: 1.52
-    - _WireframeGlowAmount: 0.75
-    - _WireframePower: 4
-    - _WireframeThickness: 0.00101
+    - _WireframeFresnelExp: 2.08
+    - _WireframeGlowAmount: 1.32
+    - _WireframePower: 14
+    - _WireframeThickness: 0.00191
     - __dirty: 0
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _OpacityTextureChannel: {r: 0, g: 0, b: 0, a: 1}
-    - _RampColorTint: {r: 0.7294118, g: 0.9999999, b: 1, a: 1}
+    - _RampColorTint: {r: 0.5882353, g: 1, b: 0.94812405, a: 1}
   m_BuildTextureStacks: []
