@@ -8578,7 +8578,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: -0.1}
+    m_Position: {x: 0, y: 0.05, z: -0.1}
     m_Rotation: {x: 0, y: 0, z: 62.29}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
@@ -8659,7 +8659,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.2
+      value: 0.12
       mode: 0
       spread: 0
       speed:
@@ -8778,7 +8778,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 70
+      scalar: 25
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9217,7 +9217,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.16470589, g: 1, b: 0.9647059, a: 1}
-        key1: {r: 0.16542059, g: 0.3424407, b: 0.7735849, a: 0.9137255}
+        key1: {r: 0.23146522, g: 0.16470587, b: 0.77254903, a: 0.9137255}
         key2: {r: 0.99215686, g: 0.59218454, b: 0.44705883, a: 0.7411765}
         key3: {r: 0, g: 0, b: 0, a: 0.7411765}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -9225,7 +9225,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 36044
+        ctime1: 31033
         ctime2: 65535
         ctime3: 0
         ctime4: 0
