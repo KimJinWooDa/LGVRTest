@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 3355834665714157826}
   m_Layer: 0
   m_Name: SuperChatBtn
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 7649943679312779092}
   m_Layer: 0
   m_Name: Cancel
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2828,7 +2828,7 @@ GameObject:
   - component: {fileID: 3217020899685258192}
   m_Layer: 0
   m_Name: W
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3014,7 +3014,7 @@ GameObject:
   - component: {fileID: 3217020900151501762}
   m_Layer: 0
   m_Name: W
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3287,7 +3287,7 @@ GameObject:
   - component: {fileID: 3217020900163534815}
   m_Layer: 0
   m_Name: Enter
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3694,7 +3694,7 @@ GameObject:
   - component: {fileID: 3705393302828673130}
   m_Layer: 0
   m_Name: DrawingChatBtn
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4452,7 +4452,7 @@ GameObject:
   - component: {fileID: 3160484249673462510}
   m_Layer: 0
   m_Name: ChangeUserProfile
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5165,7 +5165,7 @@ GameObject:
   - component: {fileID: 5823963378404303270}
   m_Layer: 0
   m_Name: E
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5302,7 +5302,7 @@ GameObject:
   - component: {fileID: 5823963378407454441}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5838,7 +5838,7 @@ GameObject:
   - component: {fileID: 5823963378451860916}
   m_Layer: 0
   m_Name: SpaceBar
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6314,7 +6314,7 @@ GameObject:
   - component: {fileID: 5823963378513773760}
   m_Layer: 0
   m_Name: M
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7114,7 +7114,7 @@ GameObject:
   - component: {fileID: 5823963378564059596}
   m_Layer: 0
   m_Name: U
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7468,7 +7468,7 @@ GameObject:
   - component: {fileID: 5823963378599802367}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7787,7 +7787,7 @@ GameObject:
   - component: {fileID: 5823963378629712202}
   m_Layer: 0
   m_Name: Q
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8328,7 +8328,7 @@ GameObject:
   - component: {fileID: 5823963378651837612}
   m_Layer: 0
   m_Name: D
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8601,7 +8601,7 @@ GameObject:
   - component: {fileID: 5823963378660445684}
   m_Layer: 0
   m_Name: 8
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8969,7 +8969,7 @@ GameObject:
   - component: {fileID: 5823963378674191921}
   m_Layer: 0
   m_Name: L
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9001,7 +9001,7 @@ GameObject:
   - component: {fileID: 5823963378676784806}
   m_Layer: 0
   m_Name: N
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9354,7 +9354,7 @@ GameObject:
   - component: {fileID: 5823963378708100217}
   m_Layer: 0
   m_Name: J
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9627,7 +9627,7 @@ GameObject:
   - component: {fileID: 5823963378721204845}
   m_Layer: 0
   m_Name: ESC
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10029,7 +10029,7 @@ GameObject:
   - component: {fileID: 5823963378732313530}
   m_Layer: 0
   m_Name: M
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10113,7 +10113,7 @@ GameObject:
   - component: {fileID: 5823963378734431924}
   m_Layer: 0
   m_Name: S
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11448,7 +11448,7 @@ GameObject:
   - component: {fileID: 5823963378881163644}
   m_Layer: 0
   m_Name: I
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11939,7 +11939,7 @@ GameObject:
   - component: {fileID: 5823963378896925486}
   m_Layer: 0
   m_Name: F
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12108,7 +12108,7 @@ GameObject:
   - component: {fileID: 5823963378918437792}
   m_Layer: 0
   m_Name: S
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12821,7 +12821,7 @@ GameObject:
   - component: {fileID: 5823963379019289608}
   m_Layer: 0
   m_Name: '!'
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12990,7 +12990,7 @@ GameObject:
   - component: {fileID: 5823963379031995073}
   m_Layer: 0
   m_Name: P
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13129,7 +13129,7 @@ GameObject:
   - component: {fileID: 5823963379047733747}
   m_Layer: 0
   m_Name: ','
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13402,7 +13402,7 @@ GameObject:
   - component: {fileID: 5823963379055437964}
   m_Layer: 0
   m_Name: X
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14035,7 +14035,7 @@ GameObject:
   - component: {fileID: 5823963379096016610}
   m_Layer: 0
   m_Name: T
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14403,7 +14403,7 @@ GameObject:
   - component: {fileID: 5823963379115989085}
   m_Layer: 0
   m_Name: D
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14703,7 +14703,7 @@ GameObject:
   - component: {fileID: 5823963379150381595}
   m_Layer: 0
   m_Name: C
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14989,7 +14989,7 @@ GameObject:
   - component: {fileID: 5823963379171491232}
   m_Layer: 0
   m_Name: close
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15304,7 +15304,7 @@ GameObject:
   - component: {fileID: 5823963379202345824}
   m_Layer: 0
   m_Name: Q
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15535,7 +15535,7 @@ GameObject:
   - component: {fileID: 5823963379231992044}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15909,7 +15909,7 @@ GameObject:
   - component: {fileID: 5823963379249689783}
   m_Layer: 0
   m_Name: F
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16182,7 +16182,7 @@ GameObject:
   - component: {fileID: 5823963379257762836}
   m_Layer: 0
   m_Name: 0
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16948,7 +16948,7 @@ GameObject:
   - component: {fileID: 5823963379294640045}
   m_Layer: 0
   m_Name: Clear
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17437,7 +17437,7 @@ GameObject:
   - component: {fileID: 5823963379377647453}
   m_Layer: 0
   m_Name: C
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17704,7 +17704,7 @@ GameObject:
   - component: {fileID: 5823963379382767994}
   m_Layer: 0
   m_Name: V
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18084,7 +18084,7 @@ GameObject:
   - component: {fileID: 5823963379419796424}
   m_Layer: 0
   m_Name: '?'
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18167,7 +18167,7 @@ GameObject:
   - component: {fileID: 5823963379428742722}
   m_Layer: 0
   m_Name: 9
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18882,7 +18882,7 @@ GameObject:
   - component: {fileID: 5823963379545493912}
   m_Layer: 0
   m_Name: K
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18920,7 +18920,7 @@ GameObject:
   - component: {fileID: 5823963379546136541}
   m_Layer: 0
   m_Name: H
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19643,7 +19643,7 @@ GameObject:
   - component: {fileID: 5823963379632324887}
   m_Layer: 0
   m_Name: .
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19916,7 +19916,7 @@ GameObject:
   - component: {fileID: 5823963379639169889}
   m_Layer: 0
   m_Name: U
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20189,7 +20189,7 @@ GameObject:
   - component: {fileID: 5823963379640211999}
   m_Layer: 0
   m_Name: Y
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20456,7 +20456,7 @@ GameObject:
   - component: {fileID: 5823963379641380296}
   m_Layer: 0
   m_Name: I
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20488,7 +20488,7 @@ GameObject:
   - component: {fileID: 5823963379647673013}
   m_Layer: 0
   m_Name: G
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20687,7 +20687,7 @@ GameObject:
   - component: {fileID: 5823963379661070597}
   m_Layer: 0
   m_Name: Y
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21074,7 +21074,7 @@ GameObject:
   - component: {fileID: 5823963379713353517}
   m_Layer: 0
   m_Name: Z
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21482,7 +21482,7 @@ GameObject:
   - component: {fileID: 5823963379720005526}
   m_Layer: 0
   m_Name: G
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22802,7 +22802,7 @@ GameObject:
   - component: {fileID: 5823963379872168175}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23445,7 +23445,7 @@ GameObject:
   - component: {fileID: 5823963379886558998}
   m_Layer: 0
   m_Name: T
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23477,7 +23477,7 @@ GameObject:
   - component: {fileID: 5823963379895222566}
   m_Layer: 0
   m_Name: X
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23690,7 +23690,7 @@ GameObject:
   - component: {fileID: 5823963379944814160}
   m_Layer: 0
   m_Name: ','
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23767,7 +23767,7 @@ GameObject:
   - component: {fileID: 5823963379962226840}
   m_Layer: 0
   m_Name: H
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24081,7 +24081,7 @@ GameObject:
   - component: {fileID: 5823963379984576160}
   m_Layer: 0
   m_Name: R
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24119,7 +24119,7 @@ GameObject:
   - component: {fileID: 5823963379985760290}
   m_Layer: 0
   m_Name: O
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24575,7 +24575,7 @@ GameObject:
   - component: {fileID: 5823963380018729732}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25367,7 +25367,7 @@ GameObject:
   - component: {fileID: 5823963380077589233}
   m_Layer: 0
   m_Name: A
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25640,7 +25640,7 @@ GameObject:
   - component: {fileID: 5823963380085016396}
   m_Layer: 0
   m_Name: '?'
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25913,7 +25913,7 @@ GameObject:
   - component: {fileID: 5823963380086104375}
   m_Layer: 0
   m_Name: E
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26186,7 +26186,7 @@ GameObject:
   - component: {fileID: 5823963380087812633}
   m_Layer: 0
   m_Name: Clear
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26499,7 +26499,7 @@ GameObject:
   - component: {fileID: 5823963380112748560}
   m_Layer: 0
   m_Name: A
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26677,7 +26677,7 @@ GameObject:
   - component: {fileID: 5823963380124879015}
   m_Layer: 0
   m_Name: B
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27268,7 +27268,7 @@ GameObject:
   - component: {fileID: 5823963380155958149}
   m_Layer: 0
   m_Name: B
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27788,7 +27788,7 @@ GameObject:
   - component: {fileID: 5823963380178624176}
   m_Layer: 0
   m_Name: '!'
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28521,7 +28521,7 @@ GameObject:
   - component: {fileID: 5823963380195015282}
   m_Layer: 0
   m_Name: .
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28598,7 +28598,7 @@ GameObject:
   - component: {fileID: 5823963380203266156}
   m_Layer: 0
   m_Name: O
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28949,7 +28949,7 @@ GameObject:
   - component: {fileID: 5823963380249332874}
   m_Layer: 0
   m_Name: J
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29422,7 +29422,7 @@ GameObject:
   - component: {fileID: 5823963380281709850}
   m_Layer: 0
   m_Name: SpaceBar
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29435,8 +29435,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5823963380281709852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.02}
-  m_LocalScale: {x: 0.06, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -0.0012, y: -0.008, z: -0.02}
+  m_LocalScale: {x: 0.06, y: 0.073544, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5823963379260280885}
@@ -29772,7 +29772,7 @@ GameObject:
   - component: {fileID: 5823963380316277957}
   m_Layer: 0
   m_Name: .
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30241,7 +30241,7 @@ GameObject:
   - component: {fileID: 5823963380344908364}
   m_Layer: 0
   m_Name: Z
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30459,7 +30459,7 @@ GameObject:
   - component: {fileID: 5823963380353523274}
   m_Layer: 0
   m_Name: 7
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30732,7 +30732,7 @@ GameObject:
   - component: {fileID: 5823963380363716613}
   m_Layer: 0
   m_Name: K
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31005,7 +31005,7 @@ GameObject:
   - component: {fileID: 5823963380372508617}
   m_Layer: 0
   m_Name: '-'
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31278,7 +31278,7 @@ GameObject:
   - component: {fileID: 5823963380393291220}
   m_Layer: 0
   m_Name: R
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31597,7 +31597,7 @@ GameObject:
   - component: {fileID: 5823963380420733891}
   m_Layer: 0
   m_Name: P
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31916,7 +31916,7 @@ GameObject:
   - component: {fileID: 5823963380439199245}
   m_Layer: 0
   m_Name: L
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32189,7 +32189,7 @@ GameObject:
   - component: {fileID: 5823963380439728152}
   m_Layer: 0
   m_Name: V
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32608,7 +32608,7 @@ GameObject:
   - component: {fileID: 5823963380466048263}
   m_Layer: 0
   m_Name: N
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33027,7 +33027,7 @@ GameObject:
   - component: {fileID: 5823963380471782974}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: KEYPAD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

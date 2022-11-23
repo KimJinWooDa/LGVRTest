@@ -35,8 +35,8 @@ namespace Oculus.Interaction
     {
         [SerializeField]
         [Tooltip("The poke origin tracks the provided transform.")]
-        private Transform _pointTransform;
-
+        public Transform _pointTransform;
+ 
         [SerializeField]
         [Tooltip("(Meters, World) The radius of the sphere positioned at the origin.")]
         private float _radius = 0.005f;
@@ -57,11 +57,15 @@ namespace Oculus.Interaction
         public Vector3 TouchPoint { get; private set; }
         public Vector3 TouchNormal { get; private set; }
 
+
+
         public float Radius => _radius;
 
         public Vector3 Origin { get; private set; }
 
+
         private Vector3 _previousPokeOrigin;
+
 
         private PokeInteractable _previousCandidate = null;
         private PokeInteractable _hitInteractable = null;
@@ -91,7 +95,9 @@ namespace Oculus.Interaction
         {
             base.DoPreprocess();
             _previousPokeOrigin = Origin;
+       
             Origin = _pointTransform.position;
+    
         }
 
         protected override void DoPostprocess()
@@ -121,6 +127,7 @@ namespace Oculus.Interaction
             {
                 TouchPoint = _interactable.ComputeClosestPoint(Origin);
                 TouchNormal = _interactable.ClosestSurfaceNormal(TouchPoint);
+
             }
         }
 
@@ -175,19 +182,22 @@ namespace Oculus.Interaction
                 {
                     continue;
                 }
-
+   
                 Vector3 moveDirection = Origin - adjustedPokeOrigin;
+       
                 float magnitude = moveDirection.magnitude;
+        
                 if (magnitude == 0f)
                 {
                     return null;
                 }
-
+     
                 moveDirection /= magnitude;
+   
                 Ray ray = new Ray(adjustedPokeOrigin, moveDirection);
-
+      
                 Vector3 closestSurfaceNormal = interactable.ClosestSurfaceNormal(Origin);
-
+          
                 // First check that we are moving towards the surface by checking
                 // the direction of our position delta with the forward direction of the surface normal.
                 // This is to not allow presses from "behind" the surface.
@@ -257,6 +267,9 @@ namespace Oculus.Interaction
                         }
                     }
                 }
+                
+              
+                
             }
 
             if (closestInteractable != null)
@@ -264,6 +277,7 @@ namespace Oculus.Interaction
                 ClosestPoint = closestInteractable.ComputeClosestPoint(Origin);
                 TouchPoint = ClosestPoint;
                 TouchNormal = closestInteractable.ClosestSurfaceNormal(TouchPoint);
+          
             }
 
             return closestInteractable;
@@ -299,11 +313,14 @@ namespace Oculus.Interaction
                     continue;
                 }
 
+
                 Vector3 closestSurfacePoint = interactable.ClosestSurfacePoint(Origin);
                 Vector3 closestSurfaceNormal = interactable.ClosestSurfaceNormal(Origin);
-
                 Vector3 surfaceToPoint = Origin - closestSurfacePoint;
+
+         
                 float magnitude = surfaceToPoint.magnitude;
+             
                 if (magnitude != 0f)
                 {
                     // Check if our position is above the surface
@@ -320,7 +337,7 @@ namespace Oculus.Interaction
                         // interactable versus others that also pass this test this frame
                         // but may be at a closer proximity.
                         float distanceFromSurfacePoint = ComputeDistanceFrom(interactable, Origin);
-                        if(distanceFromSurfacePoint > interactable.MaxDistance)
+                        if (distanceFromSurfacePoint > interactable.MaxDistance)
                         {
                             continue;
                         }
@@ -333,18 +350,23 @@ namespace Oculus.Interaction
                             closestInteractable = interactable;
                         }
                     }
+
+                    
+                    }
                 }
+
+                if (closestInteractable != null)
+                {
+                    ClosestPoint = closestInteractable.ComputeClosestPoint(Origin);
+                    TouchPoint = ClosestPoint;
+                    TouchNormal = closestInteractable.ClosestSurfaceNormal(TouchPoint);
+
+          
+                }
+
+                return closestInteractable;
             }
 
-            if (closestInteractable != null)
-            {
-                ClosestPoint = closestInteractable.ComputeClosestPoint(Origin);
-                TouchPoint = ClosestPoint;
-                TouchNormal = closestInteractable.ClosestSurfaceNormal(TouchPoint);
-            }
-
-            return closestInteractable;
-        }
 
         protected override void InteractableSelected(PokeInteractable interactable)
         {

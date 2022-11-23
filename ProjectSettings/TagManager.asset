@@ -18,6 +18,7 @@ TagManager:
   - GREEN
   - BLUE
   - PURPLE
+  - KEYPAD
   layers:
   - Default
   - TransparentFX

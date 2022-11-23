@@ -32,7 +32,7 @@ namespace Oculus.Interaction
         public IHand Hand { get; private set; }
 
         [SerializeField]
-        private HandJointId _handJointId;
+        public HandJointId _handJointId;
 
         [SerializeField]
         private Vector3 _localPositionOffset;
