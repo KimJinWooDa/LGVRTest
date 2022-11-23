@@ -85,6 +85,12 @@ namespace Oculus.Interaction
 
         protected virtual void LateUpdate()
         {
+            if (_pokeInteractor.SelectedInteractable == null)
+            {
+                _isTouching = false;
+            }
+
+           
             UpdateWrist();
         }
 
@@ -101,6 +107,7 @@ namespace Oculus.Interaction
 
         private void UpdateWrist()
         {
+            
             if (!_isTouching) return;
 
             if (!Hand.GetRootPose(out Pose rootPose))

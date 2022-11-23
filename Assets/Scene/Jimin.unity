@@ -3176,6 +3176,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0005570275
       objectReference: {fileID: 0}
+    - target: {fileID: 311615905378422614, guid: f39a9d103c4129b42a53567f6cd8356a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 341548598001571986, guid: f39a9d103c4129b42a53567f6cd8356a,
         type: 3}
       propertyPath: m_IsActive
@@ -3196,6 +3201,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0000000037985717
       objectReference: {fileID: 0}
+    - target: {fileID: 1201370325475043717, guid: f39a9d103c4129b42a53567f6cd8356a,
+        type: 3}
+      propertyPath: _syntheticHand
+      value: 
+      objectReference: {fileID: 873572549}
     - target: {fileID: 1311321829984464416, guid: f39a9d103c4129b42a53567f6cd8356a,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -4540,6 +4550,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 866200249}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &873572549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 642930805460571361, guid: 94313e563929cb3499e3989be338a213,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279390217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c67033f580359c4581dff1ccffcca91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885617508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,6 +7276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _maxDistance
       value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516989854015812296, guid: d2d6934a666a18d46b8b7a3864dc9f63,
+        type: 3}
+      propertyPath: m_Name
+      value: DoneButtonPoke
       objectReference: {fileID: 0}
     - target: {fileID: 7516989854395125638, guid: d2d6934a666a18d46b8b7a3864dc9f63,
         type: 3}
