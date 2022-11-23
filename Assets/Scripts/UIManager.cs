@@ -54,6 +54,9 @@ public class UIManager : Singleton<UIManager>
         {
             handPose.SetActive(true);
             fakeHand = Instantiate(tutorialHand, trace);
+            fakeHand.transform.localPosition = new Vector3(0, -0.033f, 0);
+            fakeHand.transform.localRotation = Quaternion.Euler(-80f, 65f, -243f);
+            fakeHand.transform.localScale = Vector3.one * 0.74f;
             fakeHand.SetActive(true);
             //tutorialHand.SetActive(true);
         }

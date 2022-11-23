@@ -85,6 +85,8 @@ namespace Oculus.Interaction
 
         protected virtual void LateUpdate()
         {
+            if (_pokeInteractor.SelectedInteractable == null) _isTouching = false;
+            
             UpdateWrist();
         }
 
