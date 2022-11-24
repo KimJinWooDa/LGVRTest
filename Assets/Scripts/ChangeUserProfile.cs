@@ -12,21 +12,16 @@ public class ChangeUserProfile : Singleton<ChangeUserProfile>
     {
         UserInfoManager.Instance.userName = null;
         TextManager.Instance.isOnce = false;
-        //TextManager.Instance.GetMessage(" ");
+
         userProfileKeyPad.SetActive(true);
         TextManager.Instance.isChangeProfile = true;
         isChange = true;
     }
-
-    public void SetSuccessInfo()
+    
+    public void SetDoneInfo()
     {
         userProfileKeyPad.SetActive(false);
         TextManager.Instance.isChangeProfile = false;
-    }
-
-    public void SetDoneInfo()
-    {
-        TextManager.Instance.ChangeProfile();
         isChange = false;
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KeyBoardManager : MonoBehaviour
+public class KeyBoardManager : Singleton<KeyBoardManager>
 {
     public void SetNormalUI()
     {
@@ -20,5 +20,12 @@ public class KeyBoardManager : MonoBehaviour
     public void ChangeInitProfile()
     {
         UIManager.Instance.isOnce = true;
+    }
+
+    public GameObject[] gos;
+    public void SetOffGameObjects()
+    {
+        gos[0].SetActive(true);
+        gos[1].SetActive(true);
     }
 }

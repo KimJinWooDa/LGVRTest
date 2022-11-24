@@ -43,6 +43,8 @@ public class TextManager : Singleton<TextManager>
 
     [HideInInspector] public bool isChangeProfile;
     [HideInInspector] public bool isOnce;
+
+
     public void GetMessage(string message)
     {
         if (isChangeProfile)
@@ -91,7 +93,8 @@ public class TextManager : Singleton<TextManager>
             }
             else if (message == "ENTER")
             {
-                return;
+                ChangeUserProfile.Instance.SetDoneInfo();
+                KeyBoardManager.Instance.SetOffGameObjects();
             }
             else
             {
@@ -149,11 +152,7 @@ public class TextManager : Singleton<TextManager>
    
     }
 
-    public void ChangeProfile()
-    {
-        ChangeUserProfile.Instance.SetSuccessInfo();
-        
-    }
+
     [FormerlySerializedAs("paperAirPlane")] public GameObject normalAirPlane;
     public GameObject superAirPlane;
     public Transform player;
