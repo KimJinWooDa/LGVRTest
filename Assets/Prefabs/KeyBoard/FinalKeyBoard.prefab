@@ -2309,7 +2309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7496711939911096844, guid: 1b702c27fce652b458d93a39c1a9382d, type: 3}
+  - {fileID: 2100000, guid: c62c3b0d6d3588748ba8a6afc967c2cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3313,7 +3313,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8771166627424403242, guid: 1b702c27fce652b458d93a39c1a9382d, type: 3}
+  - {fileID: 2100000, guid: c62c3b0d6d3588748ba8a6afc967c2cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9726,7 +9726,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8771166627424403242, guid: 1b702c27fce652b458d93a39c1a9382d, type: 3}
+  - {fileID: 2100000, guid: c62c3b0d6d3588748ba8a6afc967c2cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9886,8 +9886,8 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -8771166627424403242, guid: 1b702c27fce652b458d93a39c1a9382d,
-            type: 3}
+          m_ObjectArgument: {fileID: 2100000, guid: c62c3b0d6d3588748ba8a6afc967c2cf,
+            type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -15010,7 +15010,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8771166627424403242, guid: 1b702c27fce652b458d93a39c1a9382d, type: 3}
+  - {fileID: 2100000, guid: c62c3b0d6d3588748ba8a6afc967c2cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33262,7 +33262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b53e3736911f49c47b02f3557faf41ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00d510eb3d98b9043a8e422921858689, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33861,7 +33861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 512bd85d8da9d3d4b96deb8f0a028706, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
